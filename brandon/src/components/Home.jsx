@@ -35,10 +35,10 @@ const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
                   <Typewriter
                     options={{
                       strings: [
-                        "I'm Simone Olivia.",
-                        "I'm a Freelancer.",
-                        "I'm a Photographer.",
-                        "I'm a Designer.",
+                        "I'm Brandon Choi.",
+                        "I'm a Software Engineer.",
+                        "I'm a Physical Therapist.",
+                        "I'm a Web Developer.",
                       ],
                       autoStart: true,
                       loop: true,
@@ -46,7 +46,7 @@ const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
                   />
                 </h2>
                 <p className="text-5 text-light mb-4">
-                  based in Los Angeles, California.
+                  based in NYC.
                 </p>
                 <a
                   href="#contact"
