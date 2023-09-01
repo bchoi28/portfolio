@@ -1,6 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import videobg from "../videos/home.mp4";
+// import videobg from "../videos/home.mp4";
 
 const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
   return (
@@ -30,15 +30,15 @@ const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
           <div className="container my-auto">
             <div className="row">
               <div className="col-12 text-center">
-                <p className="text-7 fw-500 text-white mb-2 mb-md-3">Welcome</p>
+                <p className="text-7 fw-500 text-white mb-2 mb-md-3">Hello!</p>
                 <h2 className="text-16 fw-600 text-white mb-2 mb-md-3">
                   <Typewriter
                     options={{
                       strings: [
-                        "I'm Brandon Choi.",
-                        "I'm a Software Engineer.",
-                        "I'm a Physical Therapist.",
-                        "I'm a Web Developer.",
+                        "I'm Brandon Choi",
+                        "I'm a Software Engineer",
+                        "I'm a Physical Therapist",
+                        "I'm a Web Developer",
                       ],
                       autoStart: true,
                       loop: true,
@@ -56,7 +56,7 @@ const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
                     handleNavClick("contact");
                   }}
                 >
-                  Hire Me
+                  Connect
                 </a>
               </div>
             </div>

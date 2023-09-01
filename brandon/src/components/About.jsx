@@ -33,14 +33,10 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                 "text-7 fw-600 mb-3 " + (darkTheme ? "text-white" : "")
               }
             >
-              I'm <span className="text-primary">Simone Olivia,</span> a Web
-              Developer
+              I'm <span className="text-primary">Brandon Choi,</span> a Software Engineer.
             </h2>
             <p className={darkTheme ? "text-white-50" : ""}>
-              I help you build brand for your business at an affordable price.
-              Thousands of clients have procured exceptional results while
-              working with our dedicated team. when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book.
+
             </p>
             <p className={darkTheme ? "text-white-50" : ""}>
               Delivering work within time and budget which meets client’s
@@ -49,7 +45,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
             </p>
           </div>
           {/* About me content end */}
-          {/* about me personal detials start */}
+          {/* about me personal details start */}
           <div className="col-lg-5 col-xl-4">
             <div className="ps-lg-4">
               <ul
@@ -59,18 +55,17 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                 }
               >
                 <li>
-                  <span className="fw-600 me-2">Name:</span>Simone Olivia
+                  <span className="fw-600 me-2">Name:</span>Brandon Choi
                 </li>
                 <li>
                   <span className="fw-600 me-2">Email:</span>
-                  <a href="mailto:chat@simone.com">chat@simone.com</a>
+                  <a href="mailto:bchoi28@gmail.com">bchoi28@gmail.com</a>
                 </li>
-                <li>
+                {/* <li>
                   <span className="fw-600 me-2">Age:</span>28
-                </li>
+                </li> */}
                 <li className="border-0">
-                  <span className="fw-600 me-2">From:</span>Los Angeles,
-                  California
+                  <span className="fw-600 me-2">From:</span>NY, New York
                 </li>
               </ul>
               <a
@@ -78,7 +73,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                 download
                 className="btn btn-primary rounded-pill"
               >
-                Download CV
+                Resume
               </a>
             </div>
           </div>
