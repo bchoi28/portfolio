@@ -24,6 +24,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
             <span className="bg-dark-2 rounded-pill p-2 mb-lg-1 d-none d-lg-inline-block">
               <img
                 className="img-fluid rounded-pill d-block"
+                id="profile-picture"
                 src="images/profile.jpg"
                 title="I'm Brandon"
                 alt="profile"
@@ -129,7 +130,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   Portfolio
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link
                   className="nav-link "
                   smooth
@@ -145,7 +146,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                 >
                   Testimonial
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link
                   className="nav-link "
@@ -167,39 +168,39 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
           </div>
           <ul className="social-icons social-icons-muted social-icons-sm mt-lg-auto ms-auto ms-lg-0 d-flex">
             <li className="social-icons-facebook">
-              <Tooltip text="Facebook" placement="top">
+              <Tooltip text="LinkedIn" placement="top">
                 <a
-                  href="http://www.facebook.com/"
+                  href="https://www.linkedin.com/in/brandonchoi28/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-facebook-f" />
+                  <i className="fab fa-linkedin" />
                 </a>
               </Tooltip>
             </li>
             <li className="social-icons-twitter">
-              <Tooltip text="Twitter" placement="top">
+              <Tooltip text="GitHub" placement="top">
                 <a
-                  href="http://www.twitter.com/"
+                  href="https://github.com/bchoi28"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-twitter" />
+                  <i className="fab fa-github" />
                 </a>
               </Tooltip>
             </li>
             <li className="social-icons-dribbble">
-              <Tooltip text="Dribbble" placement="top">
+              <Tooltip text="Wellfound" placement="top">
                 <a
-                  href="http://www.dribbble.com/"
+                  href="https://wellfound.com/u/brandon-choi-6"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-dribbble" />
+                  <i className="fab fa-angellist" />
                 </a>
               </Tooltip>
             </li>
-            <li className="social-icons-github">
+            {/* <li className="social-icons-github">
               <Tooltip text="Google" placement="top">
                 <a
                   href="http://www.google.com/"
@@ -209,7 +210,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   <i className="fab fa-github" />
                 </a>
               </Tooltip>
-            </li>
+            </li> */}
           </ul>
           <button
             onClick={(e) => {
