@@ -205,6 +205,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
                 >
                   {skill.name}{" "}
                   <span className="float-end">{skill.percent}%</span>
+                  {/* <img src="../../public/images/profile.jpg" alt="skill" /> */}
                 </p>
                 <div
                   className={

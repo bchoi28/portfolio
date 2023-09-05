@@ -104,13 +104,13 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   style={{ cursor: "pointer" }}
                   activeClass="active"
                   spy
-                  to="resume"
+                  to="portfolio"
                   onClick={(e) => {
                     e.preventDefault();
                     setIsNavModalClose(true);
                   }}
                 >
-                  Resume
+                  Portfolio
                 </Link>
               </li>
               <li className="nav-item">
@@ -121,13 +121,13 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   style={{ cursor: "pointer" }}
                   activeClass="active"
                   spy
-                  to="portfolio"
+                  to="resume"
                   onClick={(e) => {
                     e.preventDefault();
                     setIsNavModalClose(true);
                   }}
                 >
-                  Portfolio
+                  Resume
                 </Link>
               </li>
               {/* <li className="nav-item">

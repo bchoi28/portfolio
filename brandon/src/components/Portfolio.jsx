@@ -10,9 +10,9 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
   const [selectedProjectDetails, setSelectedProjectDetails] = useState();
 
   const filters = {
-    DESIGN: "Desing",
-    BRAND: "Brand",
-    PHOTOS: "Photos",
+    JAVASCRIPT: "JavaScript",
+    RUBY: "Ruby",
+    PYTHON: "Python",
   };
 
   const projectsData = [
@@ -40,7 +40,7 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
         "images/projects/project-1.jpg",
         "images/projects/project-5.jpg",
       ],
-      categories: [filters.BRAND],
+      categories: [filters.JAVASCRIPT],
     },
     {
       title: "Project Title 2",
