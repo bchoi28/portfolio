@@ -36,12 +36,11 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
               I'm <span className="text-primary">Brandon Choi,</span> a Software Engineer.
             </h2>
             <p className={darkTheme ? "text-white-50" : ""}>
-
+              As a former Doctor of Physical Therapy, I have always been driven by an obsession with <strong>detail</strong> and a desire to make a positive impact on people's lives.
+              My ability to understand complex systems and my passion for creating <strong>durable</strong> solutions has allowed me to seamlessly transition from healing bodies to engineering the <strong>full stack</strong>.
             </p>
             <p className={darkTheme ? "text-white-50" : ""}>
-              Delivering work within time and budget which meets client’s
-              requirements is our moto. Lorem Ipsum has been the industry's
-              standard dummy text ever when an unknown printer took a galley.
+              When I'm not expanding my engineering toolkit, I enjoy playing basketball with friends or engaging in contemplative reflections on the mysteries of the cosmos. I also like <strong>ramen</strong>...a lot. Let's connect!
             </p>
           </div>
           {/* About me content end */}
@@ -95,55 +94,55 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                     (darkTheme ? "text-white-50" : "text-muted")
                   }
                 >
+                  <span>5</span>
+                </h4>
+                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
+                  Languages
+                </p>
+              </div>
+            </div>
+            <div className="col-6 col-md-3">
+              <div className="featured-box text-center">
+                <h4
+                  className={
+                    "text-12  mb-0 " +
+                    (darkTheme ? "text-white-50" : "text-muted")
+                  }
+                >
+                  <span>35</span>
+                </h4>
+                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
+                  Projects
+                </p>
+              </div>
+            </div>
+            <div className="col-6 col-md-3">
+              <div className="featured-box text-center">
+                <h4
+                  className={
+                    "text-12  mb-0 " +
+                    (darkTheme ? "text-white-50" : "text-muted")
+                  }
+                >
+                  <span>18</span>
+                </h4>
+                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
+                  Professional Work Environments
+                </p>
+              </div>
+            </div>
+            <div className="col-6 col-md-3">
+              <div className="featured-box text-center">
+                <h4
+                  className={
+                    "text-12  mb-0 " +
+                    (darkTheme ? "text-white-50" : "text-muted")
+                  }
+                >
                   <span>10</span>+
                 </h4>
                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  Years Experiance
-                </p>
-              </div>
-            </div>
-            <div className="col-6 col-md-3">
-              <div className="featured-box text-center">
-                <h4
-                  className={
-                    "text-12  mb-0 " +
-                    (darkTheme ? "text-white-50" : "text-muted")
-                  }
-                >
-                  <span>250</span>+
-                </h4>
-                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  Happy Clients
-                </p>
-              </div>
-            </div>
-            <div className="col-6 col-md-3">
-              <div className="featured-box text-center">
-                <h4
-                  className={
-                    "text-12  mb-0 " +
-                    (darkTheme ? "text-white-50" : "text-muted")
-                  }
-                >
-                  <span>650</span>+
-                </h4>
-                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  Projects Done
-                </p>
-              </div>
-            </div>
-            <div className="col-6 col-md-3">
-              <div className="featured-box text-center">
-                <h4
-                  className={
-                    "text-12  mb-0 " +
-                    (darkTheme ? "text-white-50" : "text-muted")
-                  }
-                >
-                  <span>38</span>
-                </h4>
-                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  Get Awards
+                  Years Experience (of coffee-drinking)
                 </p>
               </div>
             </div>
