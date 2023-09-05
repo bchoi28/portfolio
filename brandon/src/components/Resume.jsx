@@ -4,70 +4,82 @@ import resumeFile from "../documents/resume.pdf";
 const Resume = ({ classicHeader, darkTheme }) => {
   const educationDetails = [
     {
-      yearRange: "2000 - 2004",
-      title: "Computer Science",
-      place: "International University",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      yearRange: "2022 - 2023",
+      title: "Software Engineering",
+      place: "App Academy, NYC",
+      desc: <p>1200+ hours immersive, <strong>in-person</strong> curriculum focused on web development, software engineering fundamentals, data structures & algorithms.</p>,
+      desc2: <p>JavaScript(React/Redux, vanilla JS, Express/Node), Ruby, Ruby on Rails, SQL, PostgreSQL, NoSQL, MongoDB</p>,
     },
     {
-      yearRange: "2005 - 2008",
-      title: "Bachelor Degree",
-      place: "University of California",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      yearRange: "2016 - 2019",
+      title: "Doctor of Physical Therapy (DPT)",
+      place: "Emory University, GA",
+      desc: <p><em>summa cum laude</em>, GPA 4.0</p>,
+      desc2: <p>Successfully published a research paper centered around the development of <strong>data-driven algorithms</strong> to personalize interventions for post-stroke patients based on real-time biofeedback.</p>
     },
-    {
-      yearRange: "2009 - 2012",
-      title: "Master Degree",
-      place: "Harvard University",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-    },
+    // {
+    //   yearRange: "2011 - 2015",
+    //   title: "B.A. in Psychology",
+    //   place: "Boston College, MA",
+    //   desc: <p><em>magna cum laude</em>, GPA 3.7</p>,
+    //   desc2: "Co-President of Psi Chi Psychology Honor Society"
+    // },
   ];
 
   const experienceDetails = [
     {
-      yearRange: "2012 - 2013",
-      title: "Jr. UI UX Designer",
-      place: "Themeforest",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      yearRange: "2011 - 2015",
+      title: "B.A. in Psychology",
+      place: "Boston College, MA",
+      desc: <p><em>magna cum laude</em>, GPA 3.7</p>,
+      desc2: "Co-President of Psi Chi Psychology Honor Society"
     },
-    {
-      yearRange: "2014 - 2016",
-      title: "Jr. Product Designer",
-      place: "Dribbble",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-    },
-    {
-      yearRange: "2017 - 2019",
-      title: "Product Designer",
-      place: "Adobe",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-    },
+    // {
+    //   yearRange: "2014 - 2016",
+    //   title: "Jr. Product Designer",
+    //   place: "Dribbble",
+    //   desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    // },
+    // {
+    //   yearRange: "2017 - 2019",
+    //   title: "Product Designer",
+    //   place: "Adobe",
+    //   desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    // },
   ];
 
   const skills = [
     {
-      name: "Web Design",
-      percent: 65,
+      name: "HTML",
+      percent: 95,
     },
     {
-      name: "HTML/CSS",
+      name: "CSS",
       percent: 95,
     },
     {
       name: "JavaScript",
+      percent: 85,
+    },
+    {
+      name: "Ruby",
+      percent: 85,
+    },
+    {
+      name: "React",
       percent: 80,
     },
     {
-      name: "React JS",
+      name: "Rails",
+      percent: 80,
+    },
+    {
+      name: "Python",
       percent: 70,
     },
     {
-      name: "Angular Js",
-      percent: 60,
-    },
-    {
-      name: "Bootstrap",
-      percent: 99,
+      name: "SQL",
+      percent: 70,
     },
   ];
 
@@ -130,6 +142,9 @@ const Resume = ({ classicHeader, darkTheme }) => {
                   <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
                     {value.desc}
                   </p>
+                  <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                    {value.desc2}
+                  </p>
                 </div>
               ))}
           </div>
@@ -140,7 +155,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
                 "text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")
               }
             >
-              My Experience
+              <br />
             </h2>
             {experienceDetails.length > 0 &&
               experienceDetails.map((value, index) => (
@@ -162,6 +177,9 @@ const Resume = ({ classicHeader, darkTheme }) => {
                   </p>
                   <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
                     {value.desc}
+                  </p>
+                  <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                    {value.desc2}
                   </p>
                 </div>
               ))}
@@ -211,7 +229,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
             href={resumeFile}
             download
           >
-            Download CV
+            Resume
             <span className="ms-1">
               <i className="fas fa-download" />
             </span>

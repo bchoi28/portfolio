@@ -2,10 +2,10 @@ import "./App.scss";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import AboutUs from "./components/About";
-import Services from "./components/Services";
+// import Services from "./components/Services";
 import Resume from "./components/Resume";
 import Portfolio from "./components/Portfolio";
-import Testimonials from "./components/Testimonials";
+// import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
@@ -79,10 +79,10 @@ function App() {
               classicHeader={classicHeader}
               darkTheme={darkTheme}
             ></AboutUs>
-            <Services
+            {/* <Services
               classicHeader={classicHeader}
               darkTheme={darkTheme}
-            ></Services>
+            ></Services> */}
             <Resume
               classicHeader={classicHeader}
               darkTheme={darkTheme}
