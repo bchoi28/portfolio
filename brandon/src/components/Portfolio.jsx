@@ -63,7 +63,7 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-2.png",
+      thumbImage: "images/projects/project-2-thumb.png",
       firstImage: "images/projects/project-1-slide.png",
       sliderImages: [
         "images/projects/project-2.jpg",
