@@ -70,6 +70,7 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                     <Slider {...settings} ref={sliderRef}>
                       <div className="item">
                         <img
+                          id={`firstImage${projectDetails?.id}`}
                           className="img-fluid"
                           alt=""
                           src={projectDetails?.firstImage}
@@ -84,14 +85,14 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                     </Slider>
                   </div>
                   <div className="col-md-5">
-                    <br />
+                    {/* <br /> */}
                     <h4
                       className={
                         "text-4 font-weight-600" +
                         (darkTheme ? " text-white" : "")
                       }
                     >
-                      Project Info:
+                      Description:
                     </h4>
                     <p>{projectDetails?.projectInfo}</p>
                     <h4
@@ -100,7 +101,7 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                         (darkTheme ? " text-white" : "")
                       }
                     >
-                      Project Details:
+                      Details:
                     </h4>
                     <ul
                       className={
@@ -158,7 +159,7 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                             (darkTheme ? " text-white" : "")
                           }
                         >
-                          URL:
+                          Live Link:
                         </span>
                         <a
                           href={projectDetails?.url?.link}
@@ -169,14 +170,14 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                         </a>
                       </li>
                     </ul>
-                    {/* <div className="row no-gutters align-items-center">
+                    <div className="row no-gutters align-items-center">
                       <div
                         className={
                           "col-auto text-dark font-weight-600" +
                           (darkTheme ? " text-white" : "")
                         }
                       >
-                        Share:
+                        Repository:
                       </div>
                       <div className="col-auto">
                         <ul
@@ -188,15 +189,15 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                           <li className="social-icons-facebook">
                             <a
                               data-toggle="tooltip"
-                              href={projectDetails?.socialLinks?.facebook}
+                              href={projectDetails?.socialLinks?.github}
                               target="_blank"
                               rel="noopener noreferrer"
-                              data-original-title="Facebook"
+                              data-original-title="GitHub"
                             >
-                              <i className="fab fa-facebook-f" />
+                              <i className="fab fa-github fa-lg" />
                             </a>
                           </li>
-                          <li className="social-icons-twitter">
+                          {/* <li className="social-icons-twitter">
                             <a
                               data-toggle="tooltip"
                               href={projectDetails?.socialLinks?.twitter}
@@ -239,10 +240,10 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                             >
                               <i className="fas fa-envelope" />
                             </a>
-                          </li>
+                          </li> */}
                         </ul>
                       </div>
-                    </div> */}
+                    </div>
                   </div>
                 </div>
               </div>

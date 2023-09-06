@@ -18,24 +18,26 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
   const projectsData = [
     {
       id: 1,
-      logo: <img style={{ width: '500px' }} src="images/projects/project-1-logo.png" alt="myFitnessBuddy" />,
+      logo:
+        <a href="https://bchoi28.github.io/myFitnessBuddy/" target="_blank" rel="noreferrer"><img style={{ width: '500px' }} src="images/projects/project-1-logo.png" alt="myFitnessBuddy" /></a>
+      ,
       title: "myFitnessBuddy",
       projectInfo:
         "myFitnessBuddy, a single-page, web application, developed with only vanilla javascript, can serve as your personal workout routine generator.",
       // client: "Ruby Clinton",
-      technologies: "JavaScript, HTML5, CSS3, ExerciseDB (API)",
+      technologies: "JavaScript, HTML5/CSS3, ExerciseDB (API)",
       category: "Health & Fitness",
       url: {
-        name: "https://bchoi28.github.io/myFitnessBuddy/",
+        name: "myFitnessBuddy",
         link: "https://bchoi28.github.io/myFitnessBuddy/",
       },
-      // socialLinks: {
-      //   facebook: "http://www.facebook.com/",
-      //   twitter: "http://www.twitter.com/",
-      //   google: "http://www.google.com/",
-      //   instagram: "http://www.instagram.com/",
-      //   mail: "mailto:example@gmail.com",
-      // },
+      socialLinks: {
+        github: "https://github.com/bchoi28/myFitnessBuddy",
+        // twitter: "http://www.twitter.com/",
+        // google: "http://www.google.com/",
+        // instagram: "http://www.instagram.com/",
+        // mail: "mailto:example@gmail.com",
+      },
       thumbImage: "images/projects/project-1.png",
       firstImage: "images/projects/project-1-slide.png",
       sliderImages: [
@@ -45,26 +47,26 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
     },
     {
       id: 2,
-      logo: <img style={{ width: '500px' }} src="images/projects/project-2-logo.png" alt="NexUs" />,
+      logo: <a href="https://nexus-zblj.onrender.com/" target="_blank" rel="noreferrer" ><img style={{ width: '400px' }} src="images/projects/project-2-logo.png" alt="NexUs" /></a>,
       title: "NexUs",
       projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+        "Join NexUs, the inter-universal professional networking social-media application inspired by LinkedIn. Connect with others AND yourself/yourselves from across the Multiverse! Empowering professionals to build their network beyond boundaries, NexUs takes networking to new frontiers.",
       // client: "Ruby Clinton",
-      technologies: "JS React-Redux, Ruby on Rails, HTML5, CSS3, PostgreSQL",
+      technologies: "JS React-Redux, Ruby on Rails, HTML5/CSS3, PostgreSQL, Render (hosting)",
       category: "Social Media/Professional Networking",
       url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
+        name: "NexUs",
+        link: "https://nexus-zblj.onrender.com/",
       },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
+      // socialLinks: {
+      //   facebook: "http://www.facebook.com/",
+      //   twitter: "http://www.twitter.com/",
+      //   google: "http://www.google.com/",
+      //   instagram: "http://www.instagram.com/",
+      //   mail: "mailto:example@gmail.com",
+      // },
       thumbImage: "images/projects/project-2-thumb.png",
-      firstImage: "images/projects/project-1-slide.png",
+      firstImage: "images/projects/project-2-gif.gif",
       sliderImages: [
         "images/projects/project-2.jpg",
         "images/projects/project-5.jpg",
