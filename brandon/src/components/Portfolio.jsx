@@ -17,39 +17,41 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
 
   const projectsData = [
     {
-      title: "Project Title 1",
+      id: 1,
+      logo: <img style={{ width: '500px' }} src="images/projects/project-1-logo.png" alt="myFitnessBuddy" />,
+      title: "myFitnessBuddy",
       projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
+        "myFitnessBuddy, a single-page, web application, developed with only vanilla javascript, can serve as your personal workout routine generator.",
+      // client: "Ruby Clinton",
+      technologies: "JavaScript, HTML5, CSS3, ExerciseDB (API)",
+      category: "Health & Fitness",
       url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
+        name: "https://bchoi28.github.io/myFitnessBuddy/",
+        link: "https://bchoi28.github.io/myFitnessBuddy/",
       },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "images/projects/project-1.jpg",
+      // socialLinks: {
+      //   facebook: "http://www.facebook.com/",
+      //   twitter: "http://www.twitter.com/",
+      //   google: "http://www.google.com/",
+      //   instagram: "http://www.instagram.com/",
+      //   mail: "mailto:example@gmail.com",
+      // },
+      thumbImage: "images/projects/project-1.png",
+      firstImage: "images/projects/project-1-slide.png",
       sliderImages: [
-        "images/projects/project-1.jpg",
-        "images/projects/project-5.jpg",
+        "images/projects/project-1.gif",
       ],
       categories: [filters.JAVASCRIPT],
     },
     {
-      title: "Project Title 2",
+      id: 2,
+      logo: <img style={{ width: '500px' }} src="images/projects/project-2-logo.png" alt="NexUs" />,
+      title: "NexUs",
       projectInfo:
         "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
+      // client: "Ruby Clinton",
+      technologies: "JS React-Redux, Ruby on Rails, HTML5, CSS3, PostgreSQL",
+      category: "Social Media/Professional Networking",
       url: {
         name: "www.example.com",
         link: "https://www.example.com",
@@ -61,7 +63,8 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-2.jpg",
+      thumbImage: "images/projects/project-2.png",
+      firstImage: "images/projects/project-1-slide.png",
       sliderImages: [
         "images/projects/project-2.jpg",
         "images/projects/project-5.jpg",
@@ -87,117 +90,117 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-3.jpg",
+      thumbImage: "images/projects/project-4.jpg",
       sliderImages: [
         "images/projects/project-3.jpg",
         "images/projects/project-5.jpg",
       ],
       categories: [filters.PHOTOS],
     },
-    {
-      title: "Project Title 4",
-      projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "images/projects/project-4.jpg",
-      sliderImages: [
-        "images/projects/project-1.jpg",
-        "images/projects/project-4.jpg",
-      ],
-      categories: [filters.BRAND, filters.PHOTOS],
-    },
-    {
-      title: "Project Title 5",
-      projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "images/projects/project-5.jpg",
-      sliderImages: [
-        "images/projects/project-1.jpg",
-        "images/projects/project-5.jpg",
-      ],
-      categories: [filters.DESIGN],
-    },
-    {
-      title: "Project Title 6",
-      projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "images/projects/project-6.jpg",
-      sliderImages: [
-        "images/projects/project-1.jpg",
-        "images/projects/project-5.jpg",
-      ],
-      categories: [filters.BRAND],
-    },
-    {
-      title: "Project Title 7",
-      projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "images/projects/project-7.jpg",
-      sliderImages: [
-        "images/projects/project-1.jpg",
-        "images/projects/project-5.jpg",
-      ],
-      categories: [filters.DESIGN, filters.PHOTOS],
-    },
+    // {
+    //   title: "Project Title 4",
+    //   projectInfo:
+    //     "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    //   client: "Ruby Clinton",
+    //   technologies: "iOS, HTML5, CSS3, PHP, Java",
+    //   industry: "Art & Design",
+    //   date: "July 16, 2019",
+    //   url: {
+    //     name: "www.example.com",
+    //     link: "https://www.example.com",
+    //   },
+    //   socialLinks: {
+    //     facebook: "http://www.facebook.com/",
+    //     twitter: "http://www.twitter.com/",
+    //     google: "http://www.google.com/",
+    //     instagram: "http://www.instagram.com/",
+    //     mail: "mailto:example@gmail.com",
+    //   },
+    //   thumbImage: "images/projects/project-4.jpg",
+    //   sliderImages: [
+    //     "images/projects/project-1.jpg",
+    //     "images/projects/project-4.jpg",
+    //   ],
+    //   categories: [filters.BRAND, filters.PHOTOS],
+    // },
+    // {
+    //   title: "Project Title 5",
+    //   projectInfo:
+    //     "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    //   client: "Ruby Clinton",
+    //   technologies: "iOS, HTML5, CSS3, PHP, Java",
+    //   industry: "Art & Design",
+    //   date: "July 16, 2019",
+    //   url: {
+    //     name: "www.example.com",
+    //     link: "https://www.example.com",
+    //   },
+    //   socialLinks: {
+    //     facebook: "http://www.facebook.com/",
+    //     twitter: "http://www.twitter.com/",
+    //     google: "http://www.google.com/",
+    //     instagram: "http://www.instagram.com/",
+    //     mail: "mailto:example@gmail.com",
+    //   },
+    //   thumbImage: "images/projects/project-5.jpg",
+    //   sliderImages: [
+    //     "images/projects/project-1.jpg",
+    //     "images/projects/project-5.jpg",
+    //   ],
+    //   categories: [filters.DESIGN],
+    // },
+    // {
+    //   title: "Project Title 6",
+    //   projectInfo:
+    //     "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    //   client: "Ruby Clinton",
+    //   technologies: "iOS, HTML5, CSS3, PHP, Java",
+    //   industry: "Art & Design",
+    //   date: "July 16, 2019",
+    //   url: {
+    //     name: "www.example.com",
+    //     link: "https://www.example.com",
+    //   },
+    //   socialLinks: {
+    //     facebook: "http://www.facebook.com/",
+    //     twitter: "http://www.twitter.com/",
+    //     google: "http://www.google.com/",
+    //     instagram: "http://www.instagram.com/",
+    //     mail: "mailto:example@gmail.com",
+    //   },
+    //   thumbImage: "images/projects/project-6.jpg",
+    //   sliderImages: [
+    //     "images/projects/project-1.jpg",
+    //     "images/projects/project-5.jpg",
+    //   ],
+    //   categories: [filters.BRAND],
+    // },
+    // {
+    //   title: "Project Title 7",
+    //   projectInfo:
+    //     "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    //   client: "Ruby Clinton",
+    //   technologies: "iOS, HTML5, CSS3, PHP, Java",
+    //   industry: "Art & Design",
+    //   date: "July 16, 2019",
+    //   url: {
+    //     name: "www.example.com",
+    //     link: "https://www.example.com",
+    //   },
+    //   socialLinks: {
+    //     facebook: "http://www.facebook.com/",
+    //     twitter: "http://www.twitter.com/",
+    //     google: "http://www.google.com/",
+    //     instagram: "http://www.instagram.com/",
+    //     mail: "mailto:example@gmail.com",
+    //   },
+    //   thumbImage: "images/projects/project-7.jpg",
+    //   sliderImages: [
+    //     "images/projects/project-1.jpg",
+    //     "images/projects/project-5.jpg",
+    //   ],
+    //   categories: [filters.DESIGN, filters.PHOTOS],
+    // },
   ];
 
   // initialize an Isotope object with configs
@@ -301,6 +304,7 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
                             setimagesLoaded(imagesLoaded + 1);
                           }}
                           className="img-fluid d-block portfolio-image"
+                          id={`thumbImage${project.id}`}
                           src={project.thumbImage}
                           alt=""
                         />
@@ -318,7 +322,7 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
                             <h5 className="text-white fw-400">
                               {project.title}
                             </h5>
-                            <span className="text-light">Category</span>
+                            <span className="text-light">{project.category}</span>
                           </div>
                         </div>
                       </div>

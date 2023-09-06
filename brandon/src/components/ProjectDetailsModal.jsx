@@ -63,7 +63,7 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                     (darkTheme ? " text-white" : "")
                   }
                 >
-                  {projectDetails?.title}
+                  {projectDetails?.logo}
                 </h2>
                 <div className="row g-4">
                   <div className="col-md-7">
@@ -72,7 +72,7 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                         <img
                           className="img-fluid"
                           alt=""
-                          src={projectDetails?.thumbImage}
+                          src={projectDetails?.firstImage}
                         />
                       </div>
                       {projectDetails?.sliderImages?.length > 0 &&
@@ -84,6 +84,7 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                     </Slider>
                   </div>
                   <div className="col-md-5">
+                    <br />
                     <h4
                       className={
                         "text-4 font-weight-600" +
@@ -106,7 +107,7 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                         "list-style-2 " + (darkTheme ? "list-style-light" : "")
                       }
                     >
-                      <li>
+                      {/* <li>
                         <span
                           className={
                             "text-dark font-weight-600 me-2" +
@@ -116,7 +117,7 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                           Client:
                         </span>
                         {projectDetails?.client}
-                      </li>
+                      </li> */}
                       <li>
                         <span
                           className={
@@ -135,11 +136,11 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                             (darkTheme ? " text-white" : "")
                           }
                         >
-                          Industry:
+                          Category:
                         </span>
-                        {projectDetails?.industry}
+                        {projectDetails?.category}
                       </li>
-                      <li>
+                      {/* <li>
                         <span
                           className={
                             "text-dark font-weight-600 me-2" +
@@ -149,7 +150,7 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                           Date:
                         </span>
                         {projectDetails?.date}
-                      </li>
+                      </li> */}
                       <li>
                         <span
                           className={
@@ -168,7 +169,7 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                         </a>
                       </li>
                     </ul>
-                    <div className="row no-gutters align-items-center">
+                    {/* <div className="row no-gutters align-items-center">
                       <div
                         className={
                           "col-auto text-dark font-weight-600" +
@@ -241,7 +242,7 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                           </li>
                         </ul>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
