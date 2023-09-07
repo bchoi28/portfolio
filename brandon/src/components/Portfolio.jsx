@@ -19,7 +19,7 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
     {
       id: 1,
       logo:
-        <a href="https://bchoi28.github.io/myFitnessBuddy/" target="_blank" rel="noreferrer"><img style={{ width: '500px' }} src="images/projects/project-1-logo.png" alt="myFitnessBuddy" /></a>
+        <a href="https://bchoi28.github.io/myFitnessBuddy/" target="_blank" rel="noreferrer"><img style={{ width: '500px', marginTop: '-20px' }} src="images/projects/project-1-logo.png" alt="myFitnessBuddy" /></a>
       ,
       title: "myFitnessBuddy",
       projectInfo:
@@ -47,10 +47,10 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
     },
     {
       id: 2,
-      logo: <a href="https://nexus-zblj.onrender.com/" target="_blank" rel="noreferrer" ><img style={{ width: '400px' }} src="images/projects/project-2-logo.png" alt="NexUs" /></a>,
+      logo: <a href="https://nexus-zblj.onrender.com/" target="_blank" rel="noreferrer" ><img style={{ width: '280px', marginTop: '-10px' }} src="images/projects/project-2-logo-white.png" alt="NexUs" /></a>,
       title: "NexUs",
       projectInfo:
-        "Join NexUs, the inter-universal professional networking social-media application inspired by LinkedIn. Connect with others AND yourself/yourselves from across the Multiverse! Empowering professionals to build their network beyond boundaries, NexUs takes networking to new frontiers.",
+        "Join NexUs, the inter-universal professional networking social-media application inspired by LinkedIn. Connect with others AND yourself/yourselves from across the Multiverse, and take your networking to new frontiers.",
       // client: "Ruby Clinton",
       technologies: "JS React-Redux, Ruby on Rails, HTML5/CSS3, PostgreSQL, Render (hosting)",
       category: "Social Media/Professional Networking",
@@ -66,12 +66,13 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
       //   mail: "mailto:example@gmail.com",
       // },
       thumbImage: "images/projects/project-2-thumb.png",
-      firstImage: "images/projects/project-2-gif.gif",
+      firstImage: "images/projects/project-2-gif1.gif",
       sliderImages: [
-        "images/projects/project-2.jpg",
-        "images/projects/project-5.jpg",
+        "images/projects/project-2-slide-2.png",
+        "images/projects/project-2-slide-4.png",
+        "images/projects/project-2-slide-3.png"
       ],
-      categories: [filters.DESIGN],
+      categories: [filters.JAVASCRIPT, filters.RUBY],
     },
     {
       title: "Project Title 3",
