@@ -12,7 +12,7 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
   const filters = {
     JAVASCRIPT: "JavaScript",
     RUBY: "Ruby",
-    PYTHON: "Python",
+    // PYTHON: "Python",
   };
 
   const projectsData = [
@@ -52,19 +52,19 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
       projectInfo:
         "Join NexUs, the inter-universal professional networking social-media application inspired by LinkedIn. Connect with others AND yourself/yourselves from across the Multiverse, and take your networking to new frontiers.",
       // client: "Ruby Clinton",
-      technologies: "JS React-Redux, Ruby on Rails, HTML5/CSS3, PostgreSQL, Render (hosting)",
+      technologies: "React Redux, Ruby on Rails, HTML5/CSS3, PostgreSQL, Render (hosting)",
       category: "Social Media/Professional Networking",
       url: {
         name: "NexUs",
         link: "https://nexus-zblj.onrender.com/",
       },
-      // socialLinks: {
-      //   facebook: "http://www.facebook.com/",
-      //   twitter: "http://www.twitter.com/",
-      //   google: "http://www.google.com/",
-      //   instagram: "http://www.instagram.com/",
-      //   mail: "mailto:example@gmail.com",
-      // },
+      socialLinks: {
+        github: "https://github.com/bchoi28/NexUs"
+        //   twitter: "http://www.twitter.com/",
+        //   google: "http://www.google.com/",
+        //   instagram: "http://www.instagram.com/",
+        //   mail: "mailto:example@gmail.com",
+      },
       thumbImage: "images/projects/project-2-thumb.png",
       firstImage: "images/projects/project-2-gif1.gif",
       sliderImages: [
@@ -75,30 +75,33 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
       categories: [filters.JAVASCRIPT, filters.RUBY],
     },
     {
-      title: "Project Title 3",
+      title: "itinerator",
+      id: 3,
+      logo: <a href="https://excursionexplorer.onrender.com/" target="_blank" rel="noreferrer" ><img style={{ width: '280px', marginTop: '-15px', marginBottom: '-25px' }} src="images/projects/project-3-logo.png" alt="itinerator" /></a>,
       projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
+        "Planning a trip abroad or feeling spontaneous with your friends, but feeling overwhelmed by decision-fatigue? Look no further! Harnessing the power of Google Maps API, itinerator will be your ultimate itinerary planning guide.",
+      // client: "Ruby Clinton",
+      technologies: "MERN stack (MongoDB, Express.js, React, Node.js), Google Maps JavaScript API (Places Library, Geocoding Service), HTML5 Geolocation API, HTML5/CSS3, Render (hosting)",
+      category: "Travel & Leisure",
+      // date: "July 16, 2019",
       url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
+        name: "itinerator",
+        link: "https://excursionexplorer.onrender.com/",
       },
       socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
+        github: "https://github.com/dtannyc1/itinerator",
+        // twitter: "http://www.twitter.com/",
+        // google: "http://www.google.com/",
+        // instagram: "http://www.instagram.com/",
+        // mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-4.jpg",
+      thumbImage: "images/projects/project-3-thumbb.png",
+      firstImage: "images/projects/project-3-gif1.gif",
       sliderImages: [
-        "images/projects/project-3.jpg",
-        "images/projects/project-5.jpg",
+        "images/projects/project-3-gif2.gif",
+        "images/projects/project-3-gif3.gif",
       ],
-      categories: [filters.PHOTOS],
+      categories: [filters.JAVASCRIPT],
     },
     // {
     //   title: "Project Title 4",
