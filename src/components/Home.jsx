@@ -35,10 +35,10 @@ const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
                   <Typewriter
                     options={{
                       strings: [
-                        "I'm Brandon Choi",
                         "I'm a Software Engineer",
-                        "I'm a Physical Therapist",
                         "I'm a Web Developer",
+                        "I'm a Physical Therapist",
+                        "I'm Brandon Choi",
                       ],
                       autoStart: true,
                       loop: true,
