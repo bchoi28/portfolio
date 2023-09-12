@@ -60,11 +60,11 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                   <span className="fw-600 me-2">Email:</span>
                   <a href="mailto:bchoi28@gmail.com">bchoi28@gmail.com</a>
                 </li>
-                {/* <li>
-                  <span className="fw-600 me-2">Age:</span>28
-                </li> */}
+                <li >
+                  <span className="fw-600 me-2">From:</span>Philadelphia, PA
+                </li>
                 <li className="border-0">
-                  <span className="fw-600 me-2">From:</span>NY, New York
+                  <span className="fw-600 me-2">Based:</span>New York, NY
                 </li>
               </ul>
               <a
@@ -109,7 +109,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                     (darkTheme ? "text-white-50" : "text-muted")
                   }
                 >
-                  <span>35</span>
+                  <span>41</span>
                 </h4>
                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
                   Projects

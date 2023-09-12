@@ -59,6 +59,9 @@ const Contact = ({ classicHeader, darkTheme }) => {
     >
       <div className={"container " + (classicHeader ? "" : "px-lg-5")}>
         {/* Heading */}
+        <br />
+        <br />
+        <br />
         <div className="position-relative d-flex text-center mb-5">
           <h2
             className={
@@ -75,11 +78,16 @@ const Contact = ({ classicHeader, darkTheme }) => {
             }
           >
             {" "}
-            {/* Get in Touch */}
+            Get in Touch
             {/* <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" /> */}
           </p>
+
         </div>
         {/* Heading end*/}
+        <br />
+        <br />
+        <br />
+        <br />
         {/* <div className="row gy-5" id="contact-row"> */}
         <div id="contact-row">
           {/* contact details */}
@@ -136,7 +144,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fab fa-linkedin" />
+                    <i className="fab fa-linkedin fa-lg" />
                   </a>
                 </Tooltip>
               </li>
@@ -147,7 +155,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fab fa-github" />
+                    <i className="fab fa-github fa-lg" />
                   </a>
                 </Tooltip>
               </li>
@@ -158,7 +166,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fab fa-angellist" />
+                    <i className="fab fa-angellist fa-lg" />
                   </a>
                 </Tooltip>
               </li>
@@ -168,11 +176,15 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fas fa-envelope" />
+                    <i className="fas fa-envelope fa-lg" />
                   </a>
                 </Tooltip>
               </li>
             </ul>
+            <br />
+            <br />
+            <br />
+            <br />
             {/* <h2
               className={
                 "mb-3 text-5 text-uppercase text-center text-md-start " +
