@@ -74,12 +74,12 @@ const Resume = ({ classicHeader, darkTheme }) => {
       percent: 80,
     },
     {
-      name: "Python",
+      name: "SQL",
       percent: 70,
     },
     {
-      name: "SQL",
-      percent: 70,
+      name: "Python",
+      percent: "in progress",
     },
   ];
 

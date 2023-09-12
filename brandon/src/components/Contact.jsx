@@ -14,10 +14,10 @@ const Contact = ({ classicHeader, darkTheme }) => {
     setSendingMail(true);
     emailjs
       .sendForm(
-        "service_i86k3ms",
-        "template_si6cin9",
+        "service_bpuerla",
+        "template_6ofqidc",
         form.current,
-        "c9HsDgGF0tvWyVnAL"
+        "HXGI8ShFBgop8iy7a"
       )
       .then(
         (result) => {
@@ -75,52 +75,42 @@ const Contact = ({ classicHeader, darkTheme }) => {
             }
           >
             {" "}
-            Get in Touch
-            <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
+            {/* Get in Touch */}
+            {/* <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" /> */}
           </p>
         </div>
         {/* Heading end*/}
-        <div className="row gy-5">
+        {/* <div className="row gy-5" id="contact-row"> */}
+        <div id="contact-row">
           {/* contact details */}
-          <div className="col-md-4 col-xl-3 order-1 order-md-0 text-center text-md-start">
-            <h2
-              className={
-                "mb-3 text-5 text-uppercase " + (darkTheme ? "text-white" : "")
-              }
-            >
-              Address
-            </h2>
-            <p className={"text-3 mb-4 " + (darkTheme ? "text-light" : "")}>
-              4th Floor, Plot No.22,
-              <br />
-              145 Murphy Canyon Rd.
-              <br />
-              San Diego CA 2028
-            </p>
-            <p className={"text-3 mb-1 " + (darkTheme ? "text-light" : "")}>
+          {/* <div className="col-md-4 col-xl-3 order-1 order-md-0 text-center text-md-start"> */}
+          <div className="">
+            <div className={"text-3 mb-4 " + (darkTheme ? "text-light" : "")}>
               <span className="text-primary text-4 me-2">
-                <i className="fas fa-phone" />
+                <i className="fas fa-location-dot" />
               </span>
-              (060) 444 434 444
-            </p>
-            <p className={"text-3 mb-1 " + (darkTheme ? "text-light" : "")}>
-              <span className="text-primary text-4 me-2">
-                <i className="fas fa-fax" />
-              </span>
-              (060) 555 545 555
-            </p>
-            <p className={"text-3 mb-4 " + (darkTheme ? "text-light" : "")}>
+              New York, NY
+            </div>
+            <div className={"text-3 mb-4 " + (darkTheme ? "text-light" : "")}>
               <span className="text-primary text-4 me-2">
                 <i className="fas fa-envelope" />
               </span>
-              chat@simone.com
-            </p>
+              <a href="mailto:bchoi28@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                bchoi28@gmail.com
+              </a>
+            </div>
+          </div>
+          {/* <div className="col-md-8 col-xl-9 order-0 order-md-1"> */}
+          <div className="">
             <h2
               className={
                 "mb-3 text-5 text-uppercase " + (darkTheme ? "text-white" : "")
               }
+              style={{ marginLeft: '-25px' }}
             >
-              Follow Me
+              Let's Connect!
             </h2>
             <ul
               className={
@@ -128,7 +118,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                 (darkTheme ? "social-icons-muted" : "")
               }
             >
-              <li className="social-icons-dribbble">
+              {/* <li className="social-icons-dribbble">
                 <Tooltip text="Dribbble" placement="top">
                   <a
                     href="http://www.dribbble.com/harnishdesign/"
@@ -138,44 +128,22 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     <i className="fab fa-dribbble" />
                   </a>
                 </Tooltip>
+              </li> */}
+              <li className="social-icons-facebook">
+                <Tooltip text="LinkedIn" placement="top">
+                  <a
+                    href="https://www.linkedin.com/in/brandonchoi28/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fab fa-linkedin" />
+                  </a>
+                </Tooltip>
               </li>
               <li className="social-icons-twitter">
-                <Tooltip text="Twitter" placement="top">
+                <Tooltip text="GitHub" placement="top">
                   <a
-                    href="https://twitter.com/harnishdesign/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-twitter" />
-                  </a>
-                </Tooltip>
-              </li>
-              <li className="social-icons-facebook">
-                <Tooltip text="Facebook" placement="top">
-                  <a
-                    href="http://www.facebook.com/harnishdesign/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-facebook-f" />
-                  </a>
-                </Tooltip>
-              </li>
-              <li className="social-icons-google">
-                <Tooltip text="Google" placement="top">
-                  <a
-                    href="http://www.google.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-google" />
-                  </a>
-                </Tooltip>
-              </li>
-              <li className="social-icons-github">
-                <Tooltip text="Github" placement="top">
-                  <a
-                    href="http://www.github.com/"
+                    href="https://github.com/bchoi28"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -183,19 +151,37 @@ const Contact = ({ classicHeader, darkTheme }) => {
                   </a>
                 </Tooltip>
               </li>
+              <li className="social-icons-dribbble">
+                <Tooltip text="Wellfound" placement="top">
+                  <a
+                    href="https://wellfound.com/u/brandon-choi-6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fab fa-angellist" />
+                  </a>
+                </Tooltip>
+              </li>
+              <li className="social-icons-email">
+                <Tooltip text="Email" placement="top">
+                  <a href="mailto:bchoi28@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fas fa-envelope" />
+                  </a>
+                </Tooltip>
+              </li>
             </ul>
-          </div>
-          {/* contact form */}
-          <div className="col-md-8 col-xl-9 order-0 order-md-1">
-            <h2
+            {/* <h2
               className={
                 "mb-3 text-5 text-uppercase text-center text-md-start " +
                 (darkTheme ? "text-white" : "")
               }
             >
-              Send us a note
-            </h2>
-            <form
+              Ping me!
+            </h2> */}
+            {/* <form
               className={darkTheme ? "form-dark" : ""}
               id="contact-form"
               action="php/mail.php"
@@ -228,7 +214,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     className="form-control"
                     rows={5}
                     required
-                    placeholder="Tell us more about your needs........"
+                    placeholder=""
                     defaultValue={""}
                   />
                 </div>
@@ -254,7 +240,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                 </button>
               </p>
               <ToastContainer />
-            </form>
+            </form> */}
           </div>
         </div>
       </div>

@@ -200,6 +200,16 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                 </a>
               </Tooltip>
             </li>
+            <li className="social-icons-email">
+              <Tooltip text="Email" placement="top">
+                <a href="mailto:bchoi28@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <i className="fas fa-envelope" />
+                </a>
+              </Tooltip>
+            </li>
+
             {/* <li className="social-icons-github">
               <Tooltip text="Google" placement="top">
                 <a
