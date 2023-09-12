@@ -62,6 +62,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
         <br />
         <br />
         <br />
+        <br />
         <div className="position-relative d-flex text-center mb-5">
           <h2
             className={
@@ -84,6 +85,9 @@ const Contact = ({ classicHeader, darkTheme }) => {
 
         </div>
         {/* Heading end*/}
+        <br />
+        <br />
+        <br />
         <br />
         <br />
         <br />
@@ -185,6 +189,8 @@ const Contact = ({ classicHeader, darkTheme }) => {
             <br />
             <br />
             <br />
+            <br />
+
             {/* <h2
               className={
                 "mb-3 text-5 text-uppercase text-center text-md-start " +
