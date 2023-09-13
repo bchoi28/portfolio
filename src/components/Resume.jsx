@@ -31,7 +31,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
       yearRange: "2011 - 2015",
       title: "B.A. in Psychology",
       place: "Boston College, MA",
-      desc: <p><em>magna cum laude</em>, GPA 3.7</p>,
+      desc: <p><em>magna cum laude</em>, GPA 3.8</p>,
       desc2: "Co-President of Psi Chi Psychology Honor Society"
     },
     // {
