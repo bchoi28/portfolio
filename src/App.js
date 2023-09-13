@@ -9,7 +9,7 @@ import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 // import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
-import ClassicHeader from "./components/ClassicHeader";
+// import ClassicHeader from "./components/ClassicHeader";
 import { commonConfig } from "./config/commonConfig";
 // import TermsAndConditions from "./components/TermsAndConditions";
 // import Disclaimer from "./components/Disclaimer";
@@ -63,11 +63,11 @@ function App() {
         {isLoading && <PreLoader></PreLoader>}
 
         <div id="main-wrapper">
-          {classicHeader ? (
+          {/* {classicHeader ? (
             <ClassicHeader handleNavClick={handleNavClick}></ClassicHeader>
           ) : (
-            <Header handleNavClick={handleNavClick}></Header>
-          )}
+            )} */}
+          <Header handleNavClick={handleNavClick}></Header>
 
           <div id="content" role="main">
             <Home
