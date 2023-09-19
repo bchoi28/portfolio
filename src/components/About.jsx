@@ -20,7 +20,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
               (darkTheme ? "text-white" : "text-dark")
             }
           >
-            <span id="about-title">Know Me More</span>
+            Know Me More
             <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
           </p>
         </div>
@@ -33,14 +33,18 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                 "text-7 fw-600 mb-3 " + (darkTheme ? "text-white" : "")
               }
             >
-              I'm <span className="text-primary">Brandon Choi,</span> a Software Engineer.
+              I'm <span className="text-primary">Brandon Choi,</span> a Fullstack Software Engineer.
             </h2>
             <p className={darkTheme ? "text-white-50" : ""}>
               As a former Doctor of Physical Therapy, I have always been driven by an obsession with <strong>detail</strong> and a desire to make a positive impact on people's lives.
               My ability to understand complex systems and my passion for creating <strong>durable</strong> solutions has allowed me to seamlessly transition from healing bodies to engineering the <strong>full stack</strong>.
             </p>
             <p className={darkTheme ? "text-white-50" : ""}>
-              When I'm not expanding my engineering toolkit, I enjoy playing basketball with friends or engaging in contemplative reflections on the mysteries of the cosmos. I also like <strong>ramen</strong>...a lot. Let's connect!
+              My greatest strengths at the moment are <strong>JavaScript</strong> and <strong>Ruby</strong>, and I'm excited to dive deeper into both <strong>frontend</strong> <em>AND</em> <strong>backend</strong> technologies!
+
+            </p>
+            <p className={darkTheme ? "text-white-50" : ""}>
+              When I'm not expanding my engineering toolkit, you'll likely find me playing basketball with friends, engaging in contemplative reflections on the mysteries of the cosmos, or enjoying a nice batch of sardines (lightly smoked). Let's connect!
             </p>
           </div>
           {/* About me content end */}
@@ -94,7 +98,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                     (darkTheme ? "text-white-50" : "text-muted")
                   }
                 >
-                  <span>7</span>
+                  <span>5</span>
                 </h4>
                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
                   Languages
@@ -144,6 +148,68 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
                   Years Experience (of coffee-drinking)
                 </p>
+              </div>
+            </div>
+            <div className="col-6 col-md-3">
+              <div className="featured-box text-center">
+                <h4
+                  className={
+                    "text-12  mb-0 " +
+                    (darkTheme ? "text-white-50" : "text-muted")
+                  }
+                >
+                  <span style={{ fontSize: '34px' }}>Learning:</span>
+                </h4>
+                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
+                  <a href="https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python/2023-05" target="_blank" rel="noreferrer">Python</a>
+                </p>
+              </div>
+            </div>
+            <div className="col-6 col-md-3">
+              <div className="featured-box text-center">
+                <h4
+                  className={
+                    "text-12  mb-0 " +
+                    (darkTheme ? "text-white-50" : "text-muted")
+                  }
+                >
+                  <span style={{ fontSize: '34px' }}>Reading:</span>
+                </h4>
+                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
+                  <a href="https://eloquentjavascript.net/" target="_blank" rel="noreferrer">Eloquent JavaScript</a>
+                </p>
+                <br />
+              </div>
+            </div>
+            <div className="col-6 col-md-3">
+              <div className="featured-box text-center">
+                <h4
+                  className={
+                    "text-12  mb-0 " +
+                    (darkTheme ? "text-white-50" : "text-muted")
+                  }
+                >
+                  <span style={{ fontSize: '34px' }}>Listening</span>
+                </h4>
+                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
+                  <a href="https://www.youtube.com/watch?v=LqRZ2_w56U0" target="_blank" rel="noreferrer">Time (10-hour loop) - Hans Zimmer</a>
+                </p>
+                <br />
+              </div>
+            </div>
+            <div className="col-6 col-md-3">
+              <div className="featured-box text-center">
+                <h4
+                  className={
+                    "text-12  mb-0 " +
+                    (darkTheme ? "text-white-50" : "text-muted")
+                  }
+                >
+                  <span style={{ fontSize: '34px' }}>Growth</span>
+                </h4>
+                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
+                  Mindset                </p>
+                <br />
               </div>
             </div>
           </div>
