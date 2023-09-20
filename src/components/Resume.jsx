@@ -7,15 +7,23 @@ const Resume = ({ classicHeader, darkTheme }) => {
       yearRange: "2022 - 2023",
       title: "Software Engineering",
       place: "App Academy, NYC",
-      desc: <p>1200+ hours immersive, <strong>in-person</strong> curriculum focused on web development, software engineering fundamentals, data structures & algorithms.</p>,
-      desc2: <p>JavaScript(React/Redux, vanilla JS, Express/Node), Ruby, Ruby on Rails, SQL, PostgreSQL, NoSQL, MongoDB</p>,
+      desc: <p>1200+ hours intensive, <strong>in-person</strong> curriculum focused on fullstack web development, software engineering fundamentals, data structures & algorithms, <strong>object-oriented programming</strong>, and paired programming.</p>,
+      desc2: <p>&lt;3% acceptance rate, 15-20% attrition rate</p>,
+      desc3: 'JavaScript(React/Redux, vanilla JS, Express/Node), Ruby, Ruby on Rails, SQL, PostgreSQL, NoSQL, MongoDB',
     },
     {
       yearRange: "2016 - 2019",
       title: "Doctor of Physical Therapy (DPT)",
       place: "Emory University, GA",
       desc: <p><em>summa cum laude</em>, GPA 4.0</p>,
-      desc2: <p>Successfully published a research paper centered around the development of <strong>data-driven algorithms</strong> to personalize interventions for post-stroke patients based on real-time biofeedback.</p>
+      desc2: <span>Successfully published a research paper centered around the development of <strong>data-driven algorithms</strong> to personalize interventions for post-stroke patients based on real-time biofeedback.</span>
+    },
+    {
+      yearRange: "2011 - 2015",
+      title: "B.A. in Psychology",
+      place: "Boston College, MA",
+      desc: <p><em>magna cum laude</em>, GPA 3.8</p>,
+      desc2: "Co-President of Psi Chi Psychology Honor Society"
     },
     // {
     //   yearRange: "2011 - 2015",
@@ -28,11 +36,12 @@ const Resume = ({ classicHeader, darkTheme }) => {
 
   const experienceDetails = [
     {
-      yearRange: "2011 - 2015",
-      title: "B.A. in Psychology",
-      place: "Boston College, MA",
-      desc: <p><em>magna cum laude</em>, GPA 3.8</p>,
-      desc2: "Co-President of Psi Chi Psychology Honor Society"
+      yearRange: "Jan - Sep 2022",
+      title: "Physical Therapist",
+      place: "New York Therapy & Wellness, NY",
+      desc: <p>Programmed a <strong>Ruby script</strong> to <strong>automate</strong> the creation of personalized home exercise programs for patients, considering their impairments, functional levels, and goals, <em>streamlining</em> healthcare operations</p>,
+      desc2: <p>Spearheaded the establishment of a new, collaborative venture with renowned senior living facility Aterot Avot, assuming a crucial role as the <em>exclusive</em> Physical Therapist and ambassador <strong>overseeing</strong> the plan of care of 10-15 residents concurrently</p>,
+      desc3: <p>Managed a caseload of 25+ clients across South Brooklyn, ensuring seamless communication among various stakeholders, including family members, insurance providers, and physicians to maximize client and <em>stakeholder satisfaction</em></p>
     },
     // {
     //   yearRange: "2014 - 2016",
@@ -67,7 +76,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
     },
     {
       name: "React",
-      percent: 80,
+      percent: 85,
     },
     {
       name: "Rails",
@@ -145,6 +154,9 @@ const Resume = ({ classicHeader, darkTheme }) => {
                   <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
                     {value.desc2}
                   </p>
+                  <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                    {value.desc3}
+                  </p>
                 </div>
               ))}
           </div>
@@ -155,7 +167,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
                 "text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")
               }
             >
-              <br />
+              My Experience
             </h2>
             {experienceDetails.length > 0 &&
               experienceDetails.map((value, index) => (
@@ -181,6 +193,9 @@ const Resume = ({ classicHeader, darkTheme }) => {
                   <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
                     {value.desc2}
                   </p>
+                  <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                    {value.desc3}
+                  </p>
                 </div>
               ))}
           </div>
@@ -204,7 +219,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
                   }
                 >
                   {skill.name}{" "}
-                  <span className="float-end">{skill.percent}%</span>
+                  {index !== 7 ? <span className="float-end">{skill.percent}%</span> : <span className="float-end">{skill.percent}</span>}
                   {/* <img src="../../public/images/profile.jpg" alt="skill" /> */}
                 </p>
                 <div
@@ -235,6 +250,86 @@ const Resume = ({ classicHeader, darkTheme }) => {
               <i className="fas fa-download" />
             </span>
           </a>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div className="technology-rows">
+          <div class="icon">
+            <i class="devicon-javascript-plain colored"></i>
+            <span class="icon-label">JavaScript</span>
+          </div>
+          <div class="icon">
+            <i class="devicon-react-original colored"></i>
+            <span class="icon-label">React</span>
+          </div>
+          <div class="icon">
+            <i class="devicon-redux-original colored"></i>
+            <span class="icon-label">Redux</span>
+          </div>
+          <div class="icon">
+            <i class="devicon-express-original colored"></i>
+            <span class="icon-label">Express</span>
+          </div>
+          <div class="icon">
+            <i class="devicon-nodejs-plain colored"></i>
+            <span class="icon-label">Node</span>
+          </div>
+          <div class="icon">
+            <i class="devicon-jquery-plain colored"></i>
+            <span class="icon-label">jQuery</span>
+          </div>
+          <div class="icon">
+            <i class="devicon-ruby-plain colored"></i>
+            <span class="icon-label">Ruby</span>
+          </div>
+          <div class="icon">
+            <i class="devicon-rails-plain colored"></i>
+            <span class="icon-label">Rails</span>
+          </div>
+          <div class="icon">
+            <i class="devicon-html5-plain colored"></i>
+            <span class="icon-label">HTML</span>
+          </div>
+          <div class="icon">
+            <i class="devicon-css3-plain colored"></i>
+            <span class="icon-label">CSS</span>
+          </div>
+          <div class="icon">
+            <i class="devicon-mongodb-plain colored"></i>
+            <span class="icon-label">MongoDB</span>
+          </div>
+          <div class="icon">
+            <i class="devicon-postgresql-plain colored"></i>
+            <span class="icon-label">PostgreSQL</span>
+          </div>
+          <div class="icon">
+            <i class="devicon-github-original colored"></i>
+            <span class="icon-label">GitHub</span>
+          </div>
+          <div class="icon">
+            <i class="devicon-webpack-plain colored"></i>
+            <span class="icon-label">Webpack</span>
+          </div>
+          <div class="icon">
+            <i class="devicon-amazonwebservices-original colored"></i>
+            <span class="icon-label">AWS</span>
+          </div>
+          <div class="icon">
+
+            <i class="devicon-jasmine-plain colored"></i>
+            <span class="icon-label">Jasmine</span>
+          </div>
+          <div class="icon">
+
+            <i class="devicon-jest-plain colored"></i>
+            <span class="icon-label">Jest</span>
+          </div>
+          <div class="icon">
+
+            <i class="devicon-rspec-original colored"></i>
+            <span class="icon-label">RSpec</span>
+          </div>
         </div>
       </div>
     </section>

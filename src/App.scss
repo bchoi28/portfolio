@@ -1,0 +1,17 @@
+.technology-rows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+.icon i {
+    font-size: 36px;
+}
