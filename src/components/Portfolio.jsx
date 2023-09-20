@@ -23,7 +23,7 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
       ,
       title: "myFitnessBuddy",
       projectInfo:
-        "myFitnessBuddy, a single-page, web application, developed with only vanilla javascript, can serve as your personal workout routine generator.",
+        "myFitnessBuddy, a single-page, web application, developed with only Vanilla JavaScript, can serve as your personal workout routine generator. Users can store up to 4 exercises at a time in a dynamic navigation carousel.",
       // client: "Ruby Clinton",
       technologies: "JavaScript, HTML5/CSS3, ExerciseDB (API)",
       category: "Health & Fitness",
@@ -50,9 +50,9 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
       logo: <a href="https://nexus-zblj.onrender.com/" target="_blank" rel="noreferrer" ><img style={{ width: '280px', marginTop: '-10px' }} src="images/projects/project-2-logo-white.png" alt="NexUs" /></a>,
       title: "NexUs",
       projectInfo:
-        "Join NexUs, the inter-universal professional networking social-media application inspired by LinkedIn. Connect with others AND yourself/yourselves from across the Multiverse, and take your networking to new frontiers.",
+        "Join NexUs, the inter-universal professional networking social-media application inspired by LinkedIn. Connect with others AND yourself/yourselves from across the Multiverse, and take your networking to new frontiers. Feel free to make a new account or login as a demo user, and make your first post!",
       // client: "Ruby Clinton",
-      technologies: "React Redux, Ruby on Rails, HTML5/CSS3, PostgreSQL, Render (hosting)",
+      technologies: "React-Redux, Ruby on Rails, HTML5/CSS3, PostgreSQL, AWS S3, Render (hosting)",
       category: "Social Media/Professional Networking",
       url: {
         name: "NexUs",
@@ -68,9 +68,9 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
       thumbImage: "images/projects/project-2-thumb.png",
       firstImage: "images/projects/project-2-gif1.gif",
       sliderImages: [
-        "images/projects/project-2-slide-2.png",
-        "images/projects/project-2-slide-4.png",
-        "images/projects/project-2-slide-3.png"
+        "images/projects/project-2-gif2.gif",
+        "images/projects/project-2-gif3.gif",
+        "images/projects/project-2-slide-4.png"
       ],
       categories: [filters.JAVASCRIPT, filters.RUBY],
     },

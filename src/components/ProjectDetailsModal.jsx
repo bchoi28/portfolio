@@ -174,7 +174,8 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                         </a>
                       </li>
                     </ul>
-                    <div className="row no-gutters align-items-center">
+                    <div className="row no-gutters align-items-center" id="last-row"
+                    >
                       <div
                         className={
                           "col-auto text-dark font-weight-600" +

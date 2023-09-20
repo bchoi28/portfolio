@@ -116,7 +116,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
           >
             {" "}
             Resume
-            <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
+            <span className="heading-separator-line border-bottom border-3 border-secondary d-block mx-auto" />
           </p>
         </div>
         {/* Heading end*/}
@@ -139,7 +139,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
                     (darkTheme ? "bg-dark" : "bg-white border")
                   }
                 >
-                  <p className="badge bg-primary text-2 fw-400">
+                  <p className="badge bg-secondary text-2 fw-400">
                     {value.yearRange}
                   </p>
                   <h3 className={"text-5 " + (darkTheme ? "text-white" : "")}>
@@ -178,7 +178,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
                     (darkTheme ? "bg-dark" : "bg-white border")
                   }
                 >
-                  <p className="badge bg-primary text-2 fw-400">
+                  <p className="badge bg-secondary text-2 fw-400">
                     {value.yearRange}
                   </p>
                   <h3 className={"text-5 " + (darkTheme ? "text-white" : "")}>

@@ -366,6 +366,7 @@ button.bg-primary:hover {
 
   &:hover {
     background-color: $primary-color-hover;
+    background-color: $secondary-color;
     border-color: $primary-color-hover;
   }
 }
