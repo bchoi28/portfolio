@@ -1,5 +1,7 @@
 import React from "react";
 import resumeFile from "../documents/Brandon_Choi_Resume.pdf";
+import resumeQR from "../documents/QR_resume.png";
+
 const AboutUs = ({ classicHeader, darkTheme }) => {
   return (
     <section id="about" className={"section " + (darkTheme ? "bg-dark-1" : "")}>
@@ -74,11 +76,12 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
               <a
                 href={resumeFile}
                 download
-                className="btn btn-primary rounded-pill"
+                className="btn btn-primary rounded-pill resume-absolute"
               >
                 Resume
               </a>
             </div>
+            <img className="resume-qr" src={resumeQR} alt="resume" />
           </div>
           {/* about me personal details end */}
         </div>
