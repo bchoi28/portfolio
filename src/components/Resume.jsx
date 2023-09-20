@@ -1,5 +1,5 @@
 import React from "react";
-import resumeFile from "../documents/resume_unofficial.pdf";
+import resumeFile from "../documents/Brandon_Choi_Resume.pdf";
 
 const Resume = ({ classicHeader, darkTheme }) => {
   const educationDetails = [
@@ -9,7 +9,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
       place: "App Academy, NYC",
       desc: <p>1200+ hours intensive, <strong>in-person</strong> curriculum focused on fullstack web development, software engineering fundamentals, data structures & algorithms, <strong>object-oriented programming</strong>, and paired programming.</p>,
       desc2: <p>&lt;3% acceptance rate, 15-20% attrition rate</p>,
-      desc3: 'JavaScript(React/Redux, vanilla JS, Express/Node), Ruby, Ruby on Rails, SQL, PostgreSQL, NoSQL, MongoDB',
+      desc3: 'JavaScript(React/Redux, vanilla JS, Express/Node), Ruby, Ruby on Rails, HTML/CSS, SQL, PostgreSQL, NoSQL, MongoDB, and many more!',
     },
     {
       yearRange: "2016 - 2019",

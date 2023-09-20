@@ -1,5 +1,5 @@
 import React from "react";
-import resumeFile from "../documents/resume_unofficial.pdf";
+import resumeFile from "../documents/Brandon_Choi_Resume.pdf";
 const AboutUs = ({ classicHeader, darkTheme }) => {
   return (
     <section id="about" className={"section " + (darkTheme ? "bg-dark-1" : "")}>
@@ -44,7 +44,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
 
             </p>
             <p className={darkTheme ? "text-white-50" : ""}>
-              When I'm not expanding my engineering toolkit, you'll likely find me playing basketball with friends, engaging in contemplative reflections on the mysteries of the cosmos, or enjoying a nice batch of sardines (lightly smoked). Let's connect!
+              When I'm not expanding my engineering toolkit, you'll likely find me playing basketball with friends, engaging in contemplative reflections on the mysteries of the cosmos, or enjoying a nice batch of sardines &#x1F41f; (lightly smoked). Let's connect!
             </p>
           </div>
           {/* About me content end */}
@@ -189,7 +189,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                     (darkTheme ? "text-white-50" : "text-muted")
                   }
                 >
-                  <span style={{ fontSize: '34px' }}>Listening</span>
+                  <span style={{ fontSize: '34px' }}>Listening:</span>
                 </h4>
                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
                   <a href="https://www.youtube.com/watch?v=LqRZ2_w56U0" target="_blank" rel="noreferrer">Time (10-hour loop) - Hans Zimmer</a>

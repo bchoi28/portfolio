@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Typewriter from "typewriter-effect";
 import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
@@ -61,8 +62,6 @@ const Contact = ({ classicHeader, darkTheme }) => {
         {/* Heading */}
         <br />
         <br />
-        <br />
-        <br />
         <div className="position-relative d-flex text-center mb-5">
           <h2
             className={
@@ -86,8 +85,17 @@ const Contact = ({ classicHeader, darkTheme }) => {
         </div>
         {/* Heading end*/}
         <br />
-        <br />
-        <br />
+        <h2 style={{ textAlign: 'center' }} className="text-black">
+          <Typewriter
+            options={{
+              strings: ["Thanks for stopping by!"],
+              autoStart: true,
+              loop: true,
+              delay: 60,
+              pauseFor: 1500
+            }}
+          />
+        </h2>
         <br />
         <br />
         <br />
@@ -99,15 +107,15 @@ const Contact = ({ classicHeader, darkTheme }) => {
           <div className="">
             <div className={"text-3 mb-4 " + (darkTheme ? "text-light" : "")}>
               <span className="text-primary text-4 me-2">
-                <i className="fas fa-location-dot" />
+                <i style={{ fontSize: '24px' }} className="fas fa-location-dot" />
               </span>
-              New York, NY
+              <span style={{ fontSize: '24px' }}>New York, NY</span>
             </div>
             <div className={"text-3 mb-4 " + (darkTheme ? "text-light" : "")}>
               <span className="text-primary text-4 me-2">
-                <i className="fas fa-envelope" />
+                <i style={{ fontSize: '24px' }} className="fas fa-envelope" />
               </span>
-              <a href="mailto:bchoi28@gmail.com"
+              <a style={{ fontSize: '24px' }} href="mailto:bchoi28@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer">
                 bchoi28@gmail.com
@@ -122,7 +130,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
               }
               style={{ marginLeft: '-25px' }}
             >
-              Let's Connect!
+              <span style={{ fontSize: '24px' }}>Let's Connect!</span>
             </h2>
             <ul
               className={
@@ -148,7 +156,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fab fa-linkedin fa-lg" />
+                    <i style={{ fontSize: '30px' }} className="fab fa-linkedin fa-lg" />
                   </a>
                 </Tooltip>
               </li>
@@ -159,7 +167,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fab fa-github fa-lg" />
+                    <i style={{ fontSize: '30px' }} className="fab fa-github fa-lg" />
                   </a>
                 </Tooltip>
               </li>
@@ -170,7 +178,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fab fa-angellist fa-lg" />
+                    <i style={{ fontSize: '30px' }} className="fab fa-angellist fa-lg" />
                   </a>
                 </Tooltip>
               </li>
@@ -180,7 +188,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fas fa-envelope fa-lg" />
+                    <i style={{ fontSize: '30px' }} className="fas fa-envelope fa-lg" />
                   </a>
                 </Tooltip>
               </li>

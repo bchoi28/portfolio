@@ -26,7 +26,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                 className="img-fluid rounded-pill d-block"
                 id="profile-picture"
                 src="images/profile.jpg"
-                title="I'm Brandon"
+                title="Welcome!"
                 alt="profile"
               />
             </span>
