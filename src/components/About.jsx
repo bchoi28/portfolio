@@ -104,7 +104,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                   <span>5</span>
                 </h4>
                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  Languages
+                  Coding Languages
                 </p>
               </div>
             </div>
@@ -116,10 +116,10 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                     (darkTheme ? "text-white-50" : "text-muted")
                   }
                 >
-                  <span>41</span>
+                  <span>34</span>
                 </h4>
                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  Projects
+                  Coding Projects
                 </p>
               </div>
             </div>
