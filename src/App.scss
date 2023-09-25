@@ -28,7 +28,26 @@
 .resume-qr {
     width: 120px;
     position: relative;
-    margin-left: 43px;
+    margin-left: 41px;
     margin-top: 5px;
+}
 
+// .hero-bg {
+//     background-image: url("../public/images/intro-bg.jpg");
+// }
+
+@media (max-width: 991px) {
+    .resume-qr {
+        margin-left: 17px;
+    }
+
+    // .hero-bg {
+    //     background-image: url("../public/images/profile.jpg");
+    // }
+}
+
+@media (max-width: 575px) {
+    .resume-qr {
+        margin-left: 7px;
+    }
 }
