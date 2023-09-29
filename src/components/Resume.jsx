@@ -68,23 +68,23 @@ const Resume = ({ classicHeader, darkTheme }) => {
     },
     {
       name: "JavaScript",
-      percent: 86,
+      percent: 90,
     },
     {
       name: "Ruby",
-      percent: 84,
-    },
-    {
-      name: "React",
       percent: 85,
     },
     {
+      name: "React",
+      percent: 88,
+    },
+    {
       name: "Rails",
-      percent: 82,
+      percent: 83,
     },
     {
       name: "SQL",
-      percent: 73,
+      percent: 74,
     },
     {
       name: "Python",
