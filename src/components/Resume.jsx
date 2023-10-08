@@ -1,5 +1,5 @@
 import React from "react";
-import resumeFile from "../documents/BrandonChoi_Resume.pdf";
+import resumeFile from "../documents/BrandonChoi-Resume.pdf";
 
 const Resume = ({ classicHeader, darkTheme }) => {
   const educationDetails = [
@@ -7,9 +7,9 @@ const Resume = ({ classicHeader, darkTheme }) => {
       yearRange: "2022 - 2023",
       title: "Software Engineering",
       place: "App Academy, NYC",
-      desc: <p>1200+ hours intensive, <strong>in-person</strong> curriculum focused on fullstack web development, software engineering fundamentals, data structures & algorithms, <strong>object-oriented programming</strong>, and paired programming.</p>,
+      desc: <p>1200+ hours intensive, <strong>in-person</strong> curriculum with a focus on full-stack web development, API design, database management systems, data structures & algorithms, <strong>object-oriented programming</strong>, and paired programming.</p>,
       desc2: <p>&lt;3% acceptance rate, 15-20% attrition rate</p>,
-      desc3: 'JavaScript(React/Redux, vanilla JS, Express/Node), Ruby, Ruby on Rails, HTML/CSS, SQL, PostgreSQL, NoSQL, MongoDB, and many more!',
+      desc3: 'JavaScript(React/Redux, vanilla JS, Express/Node), Ruby, Ruby on Rails, HTML/CSS, SQL, PostgreSQL, MongoDB, and many more!',
     },
     {
       yearRange: "2016 - 2019",
@@ -39,8 +39,8 @@ const Resume = ({ classicHeader, darkTheme }) => {
       yearRange: "Jan - Sep 2022",
       title: "Physical Therapist",
       place: "New York Therapy & Wellness, NY",
-      desc: <p>Programmed a <strong>Ruby script</strong> to <strong>automate</strong> the creation of personalized home exercise programs for patients, considering their impairments, functional levels, and goals, <em>streamlining</em> healthcare operations</p>,
-      desc2: <p>Spearheaded the establishment of a new, collaborative venture with renowned senior living facility Aterot Avot, assuming a crucial role as the <em>exclusive</em> Physical Therapist and ambassador <strong>overseeing</strong> the plan of care of 10-15 residents concurrently</p>,
+      desc: <p>Programmed a <strong>Ruby script</strong> to <strong>automate</strong> the creation of personalized home exercise programs for patients, considering their impairments, functional levels, and goals, reducing average documentation time per treatment note by <strong>13.3%</strong></p>,
+      desc2: <p>Spearheaded the establishment of a venture with renowned senior living facility Aterot Avot, assuming the role as the <em>exclusive</em> Physical Therapist and ambassador <strong>overseeing</strong> the plan of care of ~15 residents concurrently</p>,
       desc3: <p>Managed a caseload of 25+ clients across South Brooklyn, ensuring seamless communication among various stakeholders, including family members, insurance providers, and physicians to maximize client and <em>stakeholder satisfaction</em></p>
     },
     // {
@@ -68,19 +68,19 @@ const Resume = ({ classicHeader, darkTheme }) => {
     },
     {
       name: "JavaScript",
-      percent: 90,
+      percent: 91,
     },
     {
       name: "Ruby",
-      percent: 85,
+      percent: 89,
     },
     {
       name: "React",
-      percent: 88,
+      percent: 89,
     },
     {
       name: "Rails",
-      percent: 83,
+      percent: 86,
     },
     {
       name: "SQL",
@@ -205,6 +205,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
           className={
             "text-6 fw-600 mt-4 mb-4 " + (darkTheme ? "text-white" : "")
           }
+          id="coding-languages"
         >
           My Skills
         </h2>

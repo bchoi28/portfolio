@@ -1,6 +1,6 @@
 import React from "react";
-import resumeFile from "../documents/BrandonChoi_Resume.pdf";
-import resumeQR from "../documents/QR_Resume.png";
+import resumeFile from "../documents/BrandonChoi-Resume.pdf";
+import resumeQR from "../documents/resume_dynamic_plain.png";
 
 const AboutUs = ({ classicHeader, darkTheme }) => {
   return (
@@ -74,8 +74,10 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                 </li>
               </ul>
               <a
+                target="_blank"
+                rel="noreferrer"
                 href={resumeFile}
-                download
+                // download
                 className="btn btn-primary rounded-pill resume-absolute"
               >
                 Resume
@@ -104,7 +106,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                   <span>5</span>
                 </h4>
                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  Coding Languages
+                  <a href="#coding-languages">Coding Languages</a>
                 </p>
               </div>
             </div>
