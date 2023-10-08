@@ -172,11 +172,11 @@ html[dir="rtl"] #footer {
   }
 
   &.social-icons-sm li {
-    margin: 2px 4px;
+    margin: 2px 8px;
   }
 
   &.social-icons-sm li a {
-    font-size: 14px;
+    font-size: 22px;
   }
 
   &.social-icons-lg li a {
@@ -335,7 +335,7 @@ html[dir="rtl"] #footer {
 html:not([dir="rtl"]) .social-icons {
   li {
     &:first-child {
-      margin-left: -12px;
+      margin-left: -5px;
     }
 
     &:last-child {
