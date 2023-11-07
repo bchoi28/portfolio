@@ -62,6 +62,8 @@ const Contact = ({ classicHeader, darkTheme }) => {
         {/* Heading */}
         <br />
         <br />
+        <br />
+        <br />
         <div className="position-relative d-flex text-center mb-5">
           <h2
             className={

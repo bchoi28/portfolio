@@ -1,5 +1,5 @@
 import React from "react";
-import resumeFile from "../documents/BrandonChoi-Resume.pdf";
+import resumeFile from "../documents/BrandonChoi_Resume.pdf";
 
 const Resume = ({ classicHeader, darkTheme }) => {
   const educationDetails = [
@@ -36,19 +36,23 @@ const Resume = ({ classicHeader, darkTheme }) => {
 
   const experienceDetails = [
     {
+      yearRange: "Oct 2023 - Present",
+      title: "Software Engineer (Freelance)",
+      place: "Nola's",
+      desc: <p>Leading the <strong>front-end</strong> development for a cross-platform, open-source desktop application named Hive, using React/Material
+        UI, Python/Django, and Electron for a successful restaurant conglomerate with multi-location presence.</p>,
+      desc2: <p>Hive is designed to automate employee payout processes, streamline payment breakdowns, and enhance sales
+        tracking, reducing accounting errors previously managed solely in Google Sheets.</p>,
+      desc3: <p>Directing Agile project workflows, leveraging a Jira Kanban board for effective task management and retrospectives.</p>,
+    },
+    {
       yearRange: "Jan - Sep 2022",
       title: "Physical Therapist",
       place: "New York Therapy & Wellness, NY",
-      desc: <p>Programmed a <strong>Ruby script</strong> to <strong>automate</strong> the creation of personalized home exercise programs for patients, considering their impairments, functional levels, and goals, reducing average documentation time per treatment note by <strong>13.3%</strong></p>,
-      desc2: <p>Spearheaded the establishment of a venture with renowned senior living facility Aterot Avot, assuming the role as the <em>exclusive</em> Physical Therapist and ambassador <strong>overseeing</strong> the plan of care of ~15 residents concurrently</p>,
-      desc3: <p>Managed a caseload of 25+ clients across South Brooklyn, ensuring seamless communication among various stakeholders, including family members, insurance providers, and physicians to maximize client and <em>stakeholder satisfaction</em></p>
+      desc: <p>Programmed a <strong>Ruby script</strong> to <strong>automate</strong> the creation of personalized home exercise programs for patients, considering their impairments, functional levels, and goals, reducing average documentation time per treatment note by <strong>~13.3%.</strong></p>,
+      desc2: <p>Spearheaded the establishment of a venture with renowned senior living facility Aterot Avot, assuming the role as the <em>exclusive</em> Physical Therapist and ambassador <strong>overseeing</strong> the plan of care of ~15 residents concurrently.</p>,
+      desc3: <p>Managed a caseload of 25+ clients across South Brooklyn, ensuring seamless communication among various stakeholders, including family members, insurance providers, and physicians to maximize client and <em>stakeholder satisfaction.</em></p>
     },
-    // {
-    //   yearRange: "2014 - 2016",
-    //   title: "Jr. Product Designer",
-    //   place: "Dribbble",
-    //   desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-    // },
     // {
     //   yearRange: "2017 - 2019",
     //   title: "Product Designer",
@@ -99,7 +103,8 @@ const Resume = ({ classicHeader, darkTheme }) => {
     >
       <div className={"container " + (classicHeader ? "" : "px-lg-5")}>
         {/* Heading */}
-        <div className="position-relative d-flex text-center mb-5">
+        <div
+          className="position-relative d-flex text-center mb-5">
           <h2
             className={
               "text-24  text-uppercase fw-600 w-100 mb-0 " +
@@ -118,6 +123,20 @@ const Resume = ({ classicHeader, darkTheme }) => {
             Resume
             <span className="heading-separator-line border-bottom border-3 border-secondary d-block mx-auto" />
           </p>
+        </div>
+        <div className="text-center" style={{ marginTop: '-40px', marginBottom: '50px' }}>
+          <a
+            className="btn btn-outline-secondary rounded-pill shadow-none"
+            href={resumeFile}
+            // href='https://scanqr.to/d993ee69'
+            download
+          // target="_blank"
+          >
+            Resume
+            <span className="ms-1">
+              <i className="fas fa-download" />
+            </span>
+          </a>
         </div>
         {/* Heading end*/}
         <div className="row gx-5">
@@ -240,7 +259,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
               </div>
             ))}
         </div>
-        <div className="text-center mt-5">
+        {/* <div className="text-center mt-5">
           <a
             className="btn btn-outline-secondary rounded-pill shadow-none"
             href={resumeFile}
@@ -251,7 +270,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
               <i className="fas fa-download" />
             </span>
           </a>
-        </div>
+        </div> */}
         <br />
         <br />
         <br />
