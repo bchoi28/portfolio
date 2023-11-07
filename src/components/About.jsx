@@ -35,15 +35,14 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                 "text-7 fw-600 mb-3 " + (darkTheme ? "text-white" : "")
               }
             >
-              I'm <span className="text-primary">Brandon Choi,</span> a Fullstack Software Engineer.
+              I'm <span className="text-primary">Brandon Choi,</span> a Full-stack Software Engineer.
             </h2>
             <p className={darkTheme ? "text-white-50" : ""}>
               As a former Doctor of Physical Therapy, I have always been driven by an obsession with <strong>detail</strong> and a desire to make a positive impact on people's lives.
               My ability to understand complex systems and my passion for creating <strong>durable</strong> solutions has allowed me to seamlessly transition from healing bodies to engineering the <strong>full stack</strong>.
             </p>
             <p className={darkTheme ? "text-white-50" : ""}>
-              My greatest strengths at the moment are <strong>JavaScript</strong> and <strong>Ruby</strong>, and I'm excited to dive deeper into both <strong>frontend</strong> <em>AND</em> <strong>backend</strong> technologies!
-
+              My greatest coding language strengths at the moment are <strong>JavaScript (React, VanillaJS) </strong> and <strong>Ruby</strong>, and I'm currently learning Python &#x1f40d; and TypeScript! Although my affinity is for coding the full stack, I naturally lean <strong>front-end</strong> because of my love for design and user-centric development.
             </p>
             <p className={darkTheme ? "text-white-50" : ""}>
               When I'm not expanding my engineering toolkit, you'll likely find me playing basketball with friends, engaging in contemplative reflections on the mysteries of the cosmos, or enjoying a nice batch of sardines &#x1F41f; (lightly smoked). Let's connect!
