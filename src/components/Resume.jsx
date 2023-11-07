@@ -1,5 +1,5 @@
 import React from "react";
-import resumeFile from "../documents/BrandonChoi-Resume.pdf";
+import resumeFile from "../documents/BrandonChoi_Resume.pdf";
 
 const Resume = ({ classicHeader, darkTheme }) => {
   const educationDetails = [
@@ -99,7 +99,8 @@ const Resume = ({ classicHeader, darkTheme }) => {
     >
       <div className={"container " + (classicHeader ? "" : "px-lg-5")}>
         {/* Heading */}
-        <div className="position-relative d-flex text-center mb-5">
+        <div
+          className="position-relative d-flex text-center mb-5">
           <h2
             className={
               "text-24  text-uppercase fw-600 w-100 mb-0 " +
@@ -118,6 +119,20 @@ const Resume = ({ classicHeader, darkTheme }) => {
             Resume
             <span className="heading-separator-line border-bottom border-3 border-secondary d-block mx-auto" />
           </p>
+        </div>
+        <div className="text-center" style={{ marginTop: '-40px', marginBottom: '50px' }}>
+          <a
+            className="btn btn-outline-secondary rounded-pill shadow-none"
+            href={resumeFile}
+            // href='https://scanqr.to/d993ee69'
+            download
+          // target="_blank"
+          >
+            Resume
+            <span className="ms-1">
+              <i className="fas fa-download" />
+            </span>
+          </a>
         </div>
         {/* Heading end*/}
         <div className="row gx-5">
@@ -240,7 +255,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
               </div>
             ))}
         </div>
-        <div className="text-center mt-5">
+        {/* <div className="text-center mt-5">
           <a
             className="btn btn-outline-secondary rounded-pill shadow-none"
             href={resumeFile}
@@ -251,7 +266,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
               <i className="fas fa-download" />
             </span>
           </a>
-        </div>
+        </div> */}
         <br />
         <br />
         <br />

@@ -1,5 +1,5 @@
 import React from "react";
-import resumeFile from "../documents/BrandonChoi-Resume.pdf";
+import resumeFile from "../documents/BrandonChoi_Resume.pdf";
 import resumeQR from "../documents/resume_dynamic_plain.png";
 
 const AboutUs = ({ classicHeader, darkTheme }) => {
