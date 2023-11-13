@@ -16,7 +16,8 @@ const Resume = ({ classicHeader, darkTheme }) => {
       title: "Doctor of Physical Therapy (DPT)",
       place: "Emory University, GA",
       desc: <p><em>summa cum laude</em>, GPA 4.0</p>,
-      desc2: <span>Successfully published a research paper centered around the development of <strong>data-driven algorithms</strong> to personalize interventions for post-stroke patients based on real-time biofeedback.</span>
+      desc2: <p>Successfully published a research paper centered around the development of <strong>data-driven algorithms</strong> to personalize interventions for post-stroke patients based on real-time biofeedback.</p>,
+      desc3: <p>Allied Health Representative - Institute for Healthcare Improvement (IHI)</p>
     },
     {
       yearRange: "2011 - 2015",
@@ -35,6 +36,13 @@ const Resume = ({ classicHeader, darkTheme }) => {
   ];
 
   const experienceDetails = [
+    {
+      yearRange: "Nov 2023 - Present",
+      title: "Computer Science AI Trainer",
+      place: "Scale AI",
+      desc: <p>Critique a series of <strong>computer science</strong> and programming-related responses produced by GPT-3.5 in terms of explanation quality, style and formatting, code functionality and performance, relevance, and security to fine-tune the AI model.</p>,
+      desc2: <p>Scale AI is OpenAI's preferred partner in fine-tuning GPT-3.5.</p>,
+    },
     {
       yearRange: "Oct 2023 - Present",
       title: "Software Engineer (Freelance)",
