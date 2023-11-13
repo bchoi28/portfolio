@@ -166,24 +166,25 @@ const Resume = ({ classicHeader, darkTheme }) => {
                     (darkTheme ? "bg-dark" : "bg-white border")
                   }
                 >
-                  <p className="badge bg-secondary text-2 fw-400">
+                  <div className="badge bg-secondary text-2 fw-400" style={{ marginBottom: '20px' }}>
                     {value.yearRange}
-                  </p>
+                  </div>
                   <h3 className={"text-5 " + (darkTheme ? "text-white" : "")}>
                     {value.title}
                   </h3>
-                  <p className={darkTheme ? "text-primary" : "text-danger"}>
+                  <div className={darkTheme ? "text-primary" : "text-danger"}>
                     {value.place}
-                  </p>
-                  <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                  </div>
+                  <br />
+                  <div className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
                     {value.desc}
-                  </p>
-                  <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                  </div>
+                  <div className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
                     {value.desc2}
-                  </p>
-                  <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                  </div>
+                  <div className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
                     {value.desc3}
-                  </p>
+                  </div>
                 </div>
               ))}
           </div>
@@ -205,24 +206,25 @@ const Resume = ({ classicHeader, darkTheme }) => {
                     (darkTheme ? "bg-dark" : "bg-white border")
                   }
                 >
-                  <p className="badge bg-secondary text-2 fw-400">
+                  <div className="badge bg-secondary text-2 fw-400" style={{ marginBottom: '20px' }}>
                     {value.yearRange}
-                  </p>
+                  </div>
                   <h3 className={"text-5 " + (darkTheme ? "text-white" : "")}>
                     {value.title}
                   </h3>
-                  <p className={darkTheme ? "text-primary" : "text-danger"}>
+                  <div className={darkTheme ? "text-primary" : "text-danger"}>
                     {value.place}
-                  </p>
-                  <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                  </div>
+                  <br />
+                  <div className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
                     {value.desc}
-                  </p>
-                  <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                  </div>
+                  <div className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
                     {value.desc2}
-                  </p>
-                  <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                  </div>
+                  <div className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
                     {value.desc3}
-                  </p>
+                  </div>
                 </div>
               ))}
           </div>
@@ -283,80 +285,80 @@ const Resume = ({ classicHeader, darkTheme }) => {
         <br />
         <br />
         <div className="technology-rows">
-          <div class="icon">
-            <i class="devicon-javascript-plain colored"></i>
-            <span class="icon-label">JavaScript</span>
+          <div className="icon">
+            <i className="devicon-javascript-plain colored"></i>
+            <span className="icon-label">JavaScript</span>
           </div>
-          <div class="icon">
-            <i class="devicon-react-original colored"></i>
-            <span class="icon-label">React</span>
+          <div className="icon">
+            <i className="devicon-react-original colored"></i>
+            <span className="icon-label">React</span>
           </div>
-          <div class="icon">
-            <i class="devicon-redux-original colored"></i>
-            <span class="icon-label">Redux</span>
+          <div className="icon">
+            <i className="devicon-redux-original colored"></i>
+            <span className="icon-label">Redux</span>
           </div>
-          <div class="icon">
-            <i class="devicon-express-original colored"></i>
-            <span class="icon-label">Express</span>
+          <div className="icon">
+            <i className="devicon-express-original colored"></i>
+            <span className="icon-label">Express</span>
           </div>
-          <div class="icon">
-            <i class="devicon-nodejs-plain colored"></i>
-            <span class="icon-label">Node</span>
+          <div className="icon">
+            <i className="devicon-nodejs-plain colored"></i>
+            <span className="icon-label">Node</span>
           </div>
-          <div class="icon">
-            <i class="devicon-jquery-plain colored"></i>
-            <span class="icon-label">jQuery</span>
+          <div className="icon">
+            <i className="devicon-jquery-plain colored"></i>
+            <span className="icon-label">jQuery</span>
           </div>
-          <div class="icon">
-            <i class="devicon-ruby-plain colored"></i>
-            <span class="icon-label">Ruby</span>
+          <div className="icon">
+            <i className="devicon-ruby-plain colored"></i>
+            <span className="icon-label">Ruby</span>
           </div>
-          <div class="icon">
-            <i class="devicon-rails-plain colored"></i>
-            <span class="icon-label">Rails</span>
+          <div className="icon">
+            <i className="devicon-rails-plain colored"></i>
+            <span className="icon-label">Rails</span>
           </div>
-          <div class="icon">
-            <i class="devicon-html5-plain colored"></i>
-            <span class="icon-label">HTML</span>
+          <div className="icon">
+            <i className="devicon-html5-plain colored"></i>
+            <span className="icon-label">HTML</span>
           </div>
-          <div class="icon">
-            <i class="devicon-css3-plain colored"></i>
-            <span class="icon-label">CSS</span>
+          <div className="icon">
+            <i className="devicon-css3-plain colored"></i>
+            <span className="icon-label">CSS</span>
           </div>
-          <div class="icon">
-            <i class="devicon-mongodb-plain colored"></i>
-            <span class="icon-label">MongoDB</span>
+          <div className="icon">
+            <i className="devicon-mongodb-plain colored"></i>
+            <span className="icon-label">MongoDB</span>
           </div>
-          <div class="icon">
-            <i class="devicon-postgresql-plain colored"></i>
-            <span class="icon-label">PostgreSQL</span>
+          <div className="icon">
+            <i className="devicon-postgresql-plain colored"></i>
+            <span className="icon-label">PostgreSQL</span>
           </div>
-          <div class="icon">
-            <i class="devicon-github-original colored"></i>
-            <span class="icon-label">GitHub</span>
+          <div className="icon">
+            <i className="devicon-github-original colored"></i>
+            <span className="icon-label">GitHub</span>
           </div>
-          <div class="icon">
-            <i class="devicon-webpack-plain colored"></i>
-            <span class="icon-label">Webpack</span>
+          <div className="icon">
+            <i className="devicon-webpack-plain colored"></i>
+            <span className="icon-label">Webpack</span>
           </div>
-          <div class="icon">
-            <i class="devicon-amazonwebservices-original colored"></i>
-            <span class="icon-label">AWS</span>
+          <div className="icon">
+            <i className="devicon-amazonwebservices-original colored"></i>
+            <span className="icon-label">AWS</span>
           </div>
-          <div class="icon">
+          <div className="icon">
 
-            <i class="devicon-jasmine-plain colored"></i>
-            <span class="icon-label">Jasmine</span>
+            <i className="devicon-jasmine-plain colored"></i>
+            <span className="icon-label">Jasmine</span>
           </div>
-          <div class="icon">
+          <div className="icon">
 
-            <i class="devicon-jest-plain colored"></i>
-            <span class="icon-label">Jest</span>
+            <i className="devicon-jest-plain colored"></i>
+            <span className="icon-label">Jest</span>
           </div>
-          <div class="icon">
+          <div className="icon">
 
-            <i class="devicon-rspec-original colored"></i>
-            <span class="icon-label">RSpec</span>
+            <i className="devicon-rspec-original colored"></i>
+            <span className="icon-label">RSpec</span>
           </div>
         </div>
       </div>

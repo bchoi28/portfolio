@@ -32,19 +32,15 @@
     margin-top: 25px;
 }
 
-// .hero-bg {
-//     background-image: url("../public/images/intro-bg.jpg");
-// }
+.hero-bg {
+    background-image: url("../public/images/portfolio_background1.jpg");
+}
 
 @media (max-width: 991px) {
     .resume-qr {
         margin-left: 17px;
         margin-bottom: -30px;
     }
-
-    // .hero-bg {
-    //     background-image: url("../public/images/profile.jpg");
-    // }
 }
 
 @media (max-width: 575px) {
