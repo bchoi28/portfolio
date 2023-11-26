@@ -4,6 +4,23 @@ import ProjectDetailsModal from "./ProjectDetailsModal";
 const Portfolio = ({ classicHeader, darkTheme }) => {
   // init one ref to store the future isotope object
   const isotope = useRef();
+
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+
+  const handleIntersect = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        ref2.current.classList.add('visibleX');
+        ref3.current.classList.add('visibleY');
+      } else {
+        ref2.current.classList.remove('visibleX');
+        ref3.current.classList.remove('visibleY');
+      }
+    });
+  };
+
   // store the filter keyword in a state
   const [filterKey, setFilterKey] = useState("*");
   const [imagesLoaded, setimagesLoaded] = useState(0);
@@ -233,6 +250,18 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
 
   const handleFilterKeyChange = (key) => () => setFilterKey(key);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersect, {
+      threshold: 0.5
+    });
+
+    observer.observe(ref1.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <>
       <section
@@ -241,18 +270,20 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
       >
         <div className={"container " + (classicHeader ? "" : "px-lg-5")}>
           {/* Heading */}
-          <div className="position-relative d-flex text-center mb-5">
+          <div ref={ref1} className="position-relative d-flex text-center mb-5">
             <h2
+              ref={ref2}
               className={
-                "text-24  text-uppercase fw-600 w-100 mb-0 " +
+                "heading1 text-24  text-uppercase fw-600 w-100 mb-0 " +
                 (darkTheme ? "text-muted opacity-1" : "text-light opacity-4")
               }
             >
               Portfolio
             </h2>
             <p
+              ref={ref3}
               className={
-                "text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
+                "paragraph1 text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
                 (darkTheme ? "text-white" : "text-dark")
               }
             >
