@@ -1,24 +1,57 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import resumeFile from "../documents/BrandonChoi_Resume.pdf";
 import resumeQR from "../documents/resume_dynamic_plain.png";
 
 const AboutUs = ({ classicHeader, darkTheme }) => {
+
+  // const codingLanguagesRef = useRef(null);
+
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+
+  const handleIntersect = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        ref2.current.classList.add('visibleX');
+        ref3.current.classList.add('visibleY');
+      } else {
+        ref2.current.classList.remove('visibleX');
+        ref3.current.classList.remove('visibleY');
+      }
+    });
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersect, {
+      threshold: 0.5
+    });
+
+    observer.observe(ref1.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <section id="about" className={"section " + (darkTheme ? "bg-dark-1" : "")}>
       <div className={"container " + (classicHeader ? "" : "px-lg-5")}>
         {/* Heading */}
-        <div className="position-relative d-flex text-center mb-5">
+        <div ref={ref1} className="position-relative d-flex text-center mb-5">
           <h2
+            ref={ref2}
             className={
-              "text-24  text-uppercase fw-600 w-100 mb-0 " +
+              "heading1 text-24  text-uppercase fw-600 w-100 mb-0 " +
               (darkTheme ? "text-muted opacity-1" : "text-light opacity-4")
             }
           >
             About Me
           </h2>
           <p
+            ref={ref3}
             className={
-              "text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
+              "paragraph1 text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
               (darkTheme ? "text-white" : "text-dark")
             }
           >
@@ -105,7 +138,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                   <span>5</span>
                 </h4>
                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  <a href="#coding-languages">Coding Languages</a>
+                  <div style={{ color: '#20c997', cursor: 'pointer' }} id="coding-languages">Coding Languages</div>
                 </p>
               </div>
             </div>

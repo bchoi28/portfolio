@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Typewriter from "typewriter-effect";
 import { ToastContainer, toast } from "react-toastify";
@@ -7,51 +7,80 @@ import "react-toastify/dist/ReactToastify.css";
 import { Tooltip } from "./Tooltip";
 
 const Contact = ({ classicHeader, darkTheme }) => {
-  const form = useRef();
-  const [sendingMail, setSendingMail] = useState(false);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    setSendingMail(true);
-    emailjs
-      .sendForm(
-        "service_bpuerla",
-        "template_6ofqidc",
-        form.current,
-        "HXGI8ShFBgop8iy7a"
-      )
-      .then(
-        (result) => {
-          document.getElementById("contact-form").reset();
-          toast.success("Message sent successfully!", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: darkTheme ? "dark" : "light",
-          });
-          console.log(result.text);
-          setSendingMail(false);
-        },
-        (error) => {
-          toast.error("Something went wrong!", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: darkTheme ? "dark" : "light",
-          });
-          console.log(error.text);
-          setSendingMail(false);
-        }
-      );
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+
+  const handleIntersect = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        ref2.current.classList.add('visibleX');
+        ref3.current.classList.add('visibleY');
+      } else {
+        ref2.current.classList.remove('visibleX');
+        ref3.current.classList.remove('visibleY');
+      }
+    });
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersect, {
+      threshold: 0.5
+    });
+
+    observer.observe(ref1.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  // const form = useRef();
+  // const [sendingMail, setSendingMail] = useState(false);
+
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+  //   setSendingMail(true);
+  //   emailjs
+  //     .sendForm(
+  //       "service_bpuerla",
+  //       "template_6ofqidc",
+  //       form.current,
+  //       "HXGI8ShFBgop8iy7a"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         document.getElementById("contact-form").reset();
+  //         toast.success("Message sent successfully!", {
+  //           position: "top-right",
+  //           autoClose: 5000,
+  //           hideProgressBar: false,
+  //           closeOnClick: true,
+  //           pauseOnHover: true,
+  //           draggable: true,
+  //           progress: undefined,
+  //           theme: darkTheme ? "dark" : "light",
+  //         });
+  //         console.log(result.text);
+  //         setSendingMail(false);
+  //       },
+  //       (error) => {
+  //         toast.error("Something went wrong!", {
+  //           position: "top-right",
+  //           autoClose: 5000,
+  //           hideProgressBar: false,
+  //           closeOnClick: true,
+  //           pauseOnHover: true,
+  //           draggable: true,
+  //           progress: undefined,
+  //           theme: darkTheme ? "dark" : "light",
+  //         });
+  //         console.log(error.text);
+  //         setSendingMail(false);
+  //       }
+  //     );
+  // };
 
   return (
     <section
@@ -64,24 +93,24 @@ const Contact = ({ classicHeader, darkTheme }) => {
         <br />
         <br />
         <br />
-        <div className="position-relative d-flex text-center mb-5">
-          <h2
+        <div ref={ref1} className="position-relative d-flex text-center mb-5">
+          <h2 ref={ref2}
             className={
-              "text-24  text-uppercase fw-600 w-100 mb-0 " +
+              "heading1 text-24  text-uppercase fw-600 w-100 mb-0 " +
               (darkTheme ? "text-muted opacity-1" : "text-light opacity-4")
             }
           >
             Contact
           </h2>
-          <p
+          <p ref={ref3}
             className={
-              "text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
+              "paragraph1 text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
               (darkTheme ? "text-white" : "text-dark")
             }
           >
             {" "}
             Get in Touch
-            {/* <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" /> */}
+            <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
           </p>
 
         </div>
@@ -130,13 +159,13 @@ const Contact = ({ classicHeader, darkTheme }) => {
               className={
                 "mb-3 text-5 text-uppercase " + (darkTheme ? "text-white" : "")
               }
-              style={{ marginLeft: '-25px' }}
+            // style={{ marginLeft: '-25px' }}
             >
               <span style={{ fontSize: '24px' }}>Let's Connect!</span>
             </h2>
             <ul
               className={
-                "social-icons justify-content-center justify-content-md-start " +
+                "social-icons justify-content-center" +
                 (darkTheme ? "social-icons-muted" : "")
               }
             >
@@ -184,7 +213,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                   </a>
                 </Tooltip>
               </li>
-              <li className="social-icons-email">
+              {/* <li className="social-icons-email">
                 <Tooltip text="Email" placement="top">
                   <a href="mailto:bchoi28@gmail.com"
                     target="_blank"
@@ -193,7 +222,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     <i style={{ fontSize: '30px' }} className="fas fa-envelope fa-lg" />
                   </a>
                 </Tooltip>
-              </li>
+              </li> */}
             </ul>
             <br />
             <br />

@@ -1,7 +1,50 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import resumeFile from "../documents/BrandonChoi_Resume.pdf";
 
 const Resume = ({ classicHeader, darkTheme }) => {
+
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+
+  const handleIntersect = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        ref2.current.classList.add('visibleX');
+        ref3.current.classList.add('visibleY');
+      } else {
+        ref2.current.classList.remove('visibleX');
+        ref3.current.classList.remove('visibleY');
+      }
+    });
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersect, {
+      threshold: 0.5
+    });
+
+    observer.observe(ref1.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    const scrollToCodingLanguages = () => {
+      const mySkillsElement = document.getElementById("my-skills");
+      if (mySkillsElement) {
+        mySkillsElement.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    const codingLanguagesElement = document.getElementById("coding-languages"); // Replace with the actual ID of your button/link
+    if (codingLanguagesElement) {
+      codingLanguagesElement.addEventListener("click", scrollToCodingLanguages);
+    }
+  }, [])
+
   const educationDetails = [
     {
       yearRange: "2022 - 2023",
@@ -112,18 +155,21 @@ const Resume = ({ classicHeader, darkTheme }) => {
       <div className={"container " + (classicHeader ? "" : "px-lg-5")}>
         {/* Heading */}
         <div
+          ref={ref1}
           className="position-relative d-flex text-center mb-5">
           <h2
+            ref={ref2}
             className={
-              "text-24  text-uppercase fw-600 w-100 mb-0 " +
+              "heading1 text-24  text-uppercase fw-600 w-100 mb-0 " +
               (darkTheme ? "text-muted opacity-1" : "text-light opacity-4")
             }
           >
             Summary
           </h2>
           <p
+            ref={ref3}
             className={
-              "text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
+              "paragraph1 text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
               (darkTheme ? "text-white" : "text-dark")
             }
           >
@@ -234,11 +280,11 @@ const Resume = ({ classicHeader, darkTheme }) => {
           className={
             "text-6 fw-600 mt-4 mb-4 " + (darkTheme ? "text-white" : "")
           }
-          id="coding-languages"
+          id="my-skills"
         >
-          My Skills
+          My Technologies
         </h2>
-        <div className="row gx-5">
+        {/* <div className="row gx-5">
           {skills.length > 0 &&
             skills.map((skill, index) => (
               <div key={index} className="col-md-6">
@@ -249,9 +295,9 @@ const Resume = ({ classicHeader, darkTheme }) => {
                   }
                 >
                   {skill.name}{" "}
-                  {index !== 7 ? <span className="float-end">{skill.percent}%</span> : <span className="float-end">{skill.percent}</span>}
-                  {/* <img src="../../public/images/profile.jpg" alt="skill" /> */}
-                </p>
+                  {index !== 7 ? <span className="float-end">{skill.percent}%</span> : <span className="float-end">{skill.percent}</span>} */}
+        {/* <img src="../../public/images/profile.jpg" alt="skill" /> */}
+        {/* </p>
                 <div
                   className={
                     "progress progress-sm mb-4 " + (darkTheme ? "bg-dark" : "")
@@ -266,9 +312,9 @@ const Resume = ({ classicHeader, darkTheme }) => {
                     aria-valuemax={100}
                   />
                 </div>
-              </div>
-            ))}
-        </div>
+              </div> */}
+        {/* ))}
+        </div> */}
         {/* <div className="text-center mt-5">
           <a
             className="btn btn-outline-secondary rounded-pill shadow-none"
@@ -283,11 +329,15 @@ const Resume = ({ classicHeader, darkTheme }) => {
         </div> */}
         <br />
         <br />
-        <br />
+        {/* <br /> */}
         <div className="technology-rows">
           <div className="icon">
             <i className="devicon-javascript-plain colored"></i>
             <span className="icon-label">JavaScript</span>
+          </div>
+          <div className="icon">
+            <i className="devicon-typescript-plain colored"></i>
+            <span className="icon-label">TypeScript</span>
           </div>
           <div className="icon">
             <i className="devicon-react-original colored"></i>
@@ -310,6 +360,14 @@ const Resume = ({ classicHeader, darkTheme }) => {
             <span className="icon-label">jQuery</span>
           </div>
           <div className="icon">
+            <i className="devicon-python-plain colored"></i>
+            <span className="icon-label">Python</span>
+          </div>
+          <div className="icon">
+            <i className="devicon-django-plain colored"></i>
+            <span className="icon-label">Django</span>
+          </div>
+          <div className="icon">
             <i className="devicon-ruby-plain colored"></i>
             <span className="icon-label">Ruby</span>
           </div>
@@ -326,12 +384,20 @@ const Resume = ({ classicHeader, darkTheme }) => {
             <span className="icon-label">CSS</span>
           </div>
           <div className="icon">
+            <i className="devicon-materialui-plain colored"></i>
+            <span className="icon-label">MaterialUI</span>
+          </div>
+          <div className="icon">
             <i className="devicon-mongodb-plain colored"></i>
             <span className="icon-label">MongoDB</span>
           </div>
           <div className="icon">
             <i className="devicon-postgresql-plain colored"></i>
             <span className="icon-label">PostgreSQL</span>
+          </div>
+          <div className="icon">
+            <i className="devicon-sqlite-plain colored"></i>
+            <span className="icon-label">SQLite</span>
           </div>
           <div className="icon">
             <i className="devicon-github-original colored"></i>
@@ -342,21 +408,26 @@ const Resume = ({ classicHeader, darkTheme }) => {
             <span className="icon-label">Webpack</span>
           </div>
           <div className="icon">
+            <i className="devicon-electron-original colored"></i>
+            <span className="icon-label">Electron</span>
+          </div>
+          <div className="icon">
             <i className="devicon-amazonwebservices-original colored"></i>
             <span className="icon-label">AWS</span>
           </div>
           <div className="icon">
-
-            <i className="devicon-jasmine-plain colored"></i>
-            <span className="icon-label">Jasmine</span>
+            <i className="devicon-figma-plain colored"></i>
+            <span className="icon-label">Figma</span>
           </div>
           <div className="icon">
-
+            <i className="devicon-canva-plain colored"></i>
+            <span className="icon-label">Canva</span>
+          </div>
+          <div className="icon">
             <i className="devicon-jest-plain colored"></i>
             <span className="icon-label">Jest</span>
           </div>
           <div className="icon">
-
             <i className="devicon-rspec-original colored"></i>
             <span className="icon-label">RSpec</span>
           </div>

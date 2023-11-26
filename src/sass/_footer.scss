@@ -334,9 +334,9 @@ html[dir="rtl"] #footer {
 
 html:not([dir="rtl"]) .social-icons {
   li {
-    &:first-child {
-      margin-left: -2px;
-    }
+    // &:first-child {
+    //   margin-left: -2px;
+    // }
 
     &:last-child {
       margin-right: 0px;
