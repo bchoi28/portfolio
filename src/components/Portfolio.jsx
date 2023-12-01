@@ -41,7 +41,6 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
             title: "myFitnessBuddy",
             projectInfo:
                 "myFitnessBuddy, a single-page, web application, developed with only Vanilla JavaScript, can serve as your personal workout routine generator. Users can store up to 4 exercises at a time in a dynamic navigation carousel.",
-            // client: "Ruby Clinton",
             technologies: "JavaScript, HTML5/CSS3, ExerciseDB (API)",
             category: "Health & Fitness",
             url: {
@@ -50,10 +49,6 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
             },
             socialLinks: {
                 github: "https://github.com/bchoi28/myFitnessBuddy",
-                // twitter: "http://www.twitter.com/",
-                // google: "http://www.google.com/",
-                // instagram: "http://www.instagram.com/",
-                // mail: "mailto:example@gmail.com",
             },
             thumbImage: "images/projects/project-1.png",
             firstImage: "images/projects/project-1-slide.png",
@@ -68,7 +63,6 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
             title: "NexUs",
             projectInfo:
                 "Join NexUs, the inter-universal professional networking social-media application inspired by LinkedIn. Connect with others AND yourself/yourselves from across the Multiverse, and take your networking to new frontiers. Feel free to make a new account or login as a demo user, and make your first post!",
-            // client: "Ruby Clinton",
             technologies: "React-Redux, Ruby on Rails, HTML5/CSS3, PostgreSQL, AWS S3, Render (hosting)",
             category: "Social Media/Professional Networking",
             url: {
@@ -77,10 +71,6 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
             },
             socialLinks: {
                 github: "https://github.com/bchoi28/NexUs"
-                //   twitter: "http://www.twitter.com/",
-                //   google: "http://www.google.com/",
-                //   instagram: "http://www.instagram.com/",
-                //   mail: "mailto:example@gmail.com",
             },
             thumbImage: "images/projects/project-2-thumb.png",
             firstImage: "images/projects/project-2-gif1.gif",
@@ -97,20 +87,15 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
             logo: <a href="https://excursionexplorer.onrender.com/" target="_blank" rel="noreferrer" ><img style={{ width: '280px', marginTop: '-15px', marginBottom: '-25px' }} src="images/projects/project-3-logo.png" alt="itinerator" /></a>,
             projectInfo:
                 "Planning a trip abroad or feeling spontaneous with your friends, but feeling overwhelmed by decision-fatigue? Look no further! Harnessing the power of Google Maps API, itinerator will be your ultimate itinerary planning guide.",
-            // client: "Ruby Clinton",
             technologies: "MERN stack (MongoDB, Express.js, React, Node.js), Google Maps JavaScript API (Places Library, Geocoding Service), HTML5 Geolocation API, HTML5/CSS3, Render (hosting)",
             category: "Travel & Leisure",
-            // date: "July 16, 2019",
             url: {
                 name: "itinerator",
                 link: "https://excursionexplorer.onrender.com/",
             },
             socialLinks: {
                 github: "https://github.com/dtannyc1/itinerator",
-                // twitter: "http://www.twitter.com/",
-                // google: "http://www.google.com/",
-                // instagram: "http://www.instagram.com/",
-                // mail: "mailto:example@gmail.com",
+
             },
             thumbImage: "images/projects/project-3-thumb.png",
             firstImage: "images/projects/project-3-gif1.gif",
