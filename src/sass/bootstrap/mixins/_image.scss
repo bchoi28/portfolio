@@ -8,46 +8,59 @@
 // Keep images from scaling beyond the width of their parents.
 
 @mixin img-fluid {
-  // Part 1: Set a maximum relative to the parent
-  max-width: 100%;
-  // Part 2: Override the height to auto, otherwise images will be stretched
-  // when setting a width and height attribute on the img element.
-  height: auto;
-  margin: auto;
+    // Part 1: Set a maximum relative to the parent
+    max-width: 100%;
+    // Part 2: Override the height to auto, otherwise images will be stretched
+    // when setting a width and height attribute on the img element.
+    height: auto;
+    margin: auto;
 }
 
 #thumbImage1 {
-  width: 70%;
-  margin: auto;
+    width: 100%;
+    margin: auto;
 }
 
 #thumbImage2 {
-  width: 100%;
-  margin: auto;
-}
-
-#firstImage2 {
-  height: 150%;
+    width: 100%;
+    margin: auto;
 }
 
 #thumbImage3 {
-  // width: 100%;
-  // margin: auto;
+    // width: 100%;
+    // margin: auto;
+}
+
+#thumbImage4 {
+    width: 100%;
+    margin: auto
+}
+
+#firstImage1 {
+    margin-bottom: 30px;
+}
+
+#firstImage2 {
+    margin-bottom: -28px;
 }
 
 #firstImage3 {
-  margin-top: 35px;
+    margin-top: 35px;
+}
+
+#firstImage4 {
+    margin-bottom: 12px;
 }
 
 #sliderImage1 {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 #sliderImage3 {
-  margin-top: 35px;
+    margin-top: 35px;
 }
 
 #contact-row {
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
