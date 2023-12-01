@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import resumeFile from "../documents/BrandonChoi_Resume.pdf";
 import resumeQR from "../documents/resume_dynamic_plain.png";
 
@@ -6,11 +6,23 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
 
     // const codingLanguagesRef = useRef(null);
 
-    const ref1 = useRef(null);
+    const headingRef = useRef(null);
     const ref2 = useRef(null);
     const ref3 = useRef(null);
+    const countRef = useRef(null);
+    const sizeRef = useRef(null);
+    const ref5 = useRef(null);
+    const ref6 = useRef(null);
+    const ref7 = useRef(null);
+    const ref8 = useRef(null);
+    const [countRefObserved, setCountRefObserved] = useState(false);
 
-    const handleIntersect = (entries) => {
+    const [codingLanguagesNum, setCodingLanguagesNum] = useState(0);
+    const [codingProjectsNum, setCodingProjectsNum] = useState(0);
+    const [workEnvironmentsNum, setWorkEnvironmentsNum] = useState(0);
+    const [yearsExperienceNum, setYearsExperienceNum] = useState(0);
+
+    const handleHeadingIntersect = (entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 ref2.current.classList.add('visibleX');
@@ -22,23 +34,127 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
         });
     };
 
+    const handleCountIntersect = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                setCountRefObserved(true);
+            } else {
+                setCountRefObserved(false);
+                setCodingLanguagesNum(0);
+                setCodingProjectsNum(0);
+                setWorkEnvironmentsNum(0);
+                setYearsExperienceNum(0);
+            }
+        });
+    };
+
+    const handleSizeIntersect = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                ref5.current.classList.add('visible-stat');
+                ref6.current.classList.add('visible-stat')
+                ref7.current.classList.add('visible-stat')
+                ref8.current.classList.add('visible-stat')
+            } else {
+                ref5.current.classList.remove('visible-stat')
+                ref6.current.classList.remove('visible-stat')
+                ref7.current.classList.remove('visible-stat')
+                ref8.current.classList.remove('visible-stat')
+            }
+        });
+    };
+
     useEffect(() => {
-        const observer = new IntersectionObserver(handleIntersect, {
+        const headingObserver = new IntersectionObserver(handleHeadingIntersect, {
             threshold: 0.5
         });
+        headingObserver.observe(headingRef.current);
 
-        observer.observe(ref1.current);
+        const countRefObserver = new IntersectionObserver(handleCountIntersect, {
+            threshold: 1
+        });
+        countRefObserver.observe(countRef.current);
+
+        const sizeRefObserver = new IntersectionObserver(handleSizeIntersect, {
+            threshold: 1
+        })
+        sizeRefObserver.observe(sizeRef.current)
 
         return () => {
-            observer.disconnect();
+            headingObserver.disconnect();
+            countRefObserver.disconnect();
+            sizeRefObserver.disconnect();
         };
     }, []);
+
+    useEffect(() => {
+        if (countRefObserved) {
+            let count = 5
+            const interval = setTimeout(() => {
+                if (codingLanguagesNum < count) {
+                    setCodingLanguagesNum(codingLanguagesNum + 1)
+                }
+            }, 100)
+
+            return () => {
+                clearTimeout(interval);
+            }
+        }
+    }, [codingLanguagesNum, countRefObserved]);
+
+    useEffect(() => {
+        if (countRefObserved) {
+
+            let count = 42
+            const interval = setTimeout(() => {
+                if (codingProjectsNum < count) {
+                    setCodingProjectsNum(codingProjectsNum + 1)
+                }
+            }, 50);
+
+            return () => {
+                clearTimeout(interval);
+            }
+        }
+    }, [codingProjectsNum, countRefObserved]);
+
+    useEffect(() => {
+        if (countRefObserved) {
+
+            let count = 15
+            const interval = setTimeout(() => {
+                if (workEnvironmentsNum < count) {
+                    setWorkEnvironmentsNum(workEnvironmentsNum + 1)
+                }
+            }, 100);
+
+            return () => {
+                clearTimeout(interval);
+            }
+        }
+    }, [workEnvironmentsNum, countRefObserved]);
+
+    useEffect(() => {
+        if (countRefObserved) {
+
+            let count = 10
+            const interval = setTimeout(() => {
+                if (yearsExperienceNum < count) {
+                    setYearsExperienceNum(yearsExperienceNum + 1)
+                }
+            }, 100);
+
+            return () => {
+                clearTimeout(interval);
+            }
+        }
+    }, [yearsExperienceNum, countRefObserved]);
 
     return (
         <section id="about" className={"section " + (darkTheme ? "bg-dark-1" : "")}>
             <div className={"container " + (classicHeader ? "" : "px-lg-5")}>
                 {/* Heading */}
-                <div ref={ref1} className="position-relative d-flex text-center mb-5">
+                <div ref={headingRef} className="position-relative d-flex text-center mb-5">
                     <h2
                         ref={ref2}
                         className={
@@ -129,13 +245,13 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                     <div className="row">
                         <div className="col-6 col-md-3">
                             <div className="featured-box text-center">
-                                <h4
+                                <h4 ref={countRef}
                                     className={
                                         "text-12  mb-0 " +
                                         (darkTheme ? "text-white-50" : "text-muted")
                                     }
                                 >
-                                    <span>5</span>
+                                    <span>{codingLanguagesNum}</span>
                                 </h4>
                                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
                                     <div style={{ color: '#20c997', cursor: 'pointer' }} id="coding-languages">Coding Languages</div>
@@ -150,7 +266,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                         (darkTheme ? "text-white-50" : "text-muted")
                                     }
                                 >
-                                    <span>34</span>
+                                    <span>{codingProjectsNum}</span>
                                 </h4>
                                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
                                     Coding Projects
@@ -165,7 +281,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                         (darkTheme ? "text-white-50" : "text-muted")
                                     }
                                 >
-                                    <span>14</span>
+                                    <span>{workEnvironmentsNum}</span>
                                 </h4>
                                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
                                     Professional Work Environments
@@ -180,7 +296,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                         (darkTheme ? "text-white-50" : "text-muted")
                                     }
                                 >
-                                    <span>10</span>+
+                                    <span>{yearsExperienceNum}</span>+
                                 </h4>
                                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
                                     Years Experience (of coffee-drinking)
@@ -188,8 +304,8 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                             </div>
                         </div>
                         <div className="col-6 col-md-3">
-                            <div className="featured-box text-center">
-                                <h4
+                            <div ref={ref5} className="stat featured-box text-center">
+                                <h4 ref={sizeRef}
                                     className={
                                         "text-12  mb-0 " +
                                         (darkTheme ? "text-white-50" : "text-muted")
@@ -203,7 +319,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                             </div>
                         </div>
                         <div className="col-6 col-md-3">
-                            <div className="featured-box text-center">
+                            <div ref={ref6} className="stat featured-box text-center">
                                 <h4
                                     className={
                                         "text-12  mb-0 " +
@@ -219,7 +335,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                             </div>
                         </div>
                         <div className="col-6 col-md-3">
-                            <div className="featured-box text-center">
+                            <div ref={ref7} className="stat featured-box text-center">
                                 <h4
                                     className={
                                         "text-12  mb-0 " +
@@ -235,7 +351,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                             </div>
                         </div>
                         <div className="col-6 col-md-3">
-                            <div className="featured-box text-center">
+                            <div ref={ref8} className="stat featured-box text-center">
                                 <h4
                                     className={
                                         "text-12  mb-0 " +

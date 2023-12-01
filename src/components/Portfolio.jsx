@@ -35,30 +35,6 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
     const projectsData = [
         {
             id: 1,
-            logo:
-                <a href="https://bchoi28.github.io/myFitnessBuddy/" target="_blank" rel="noreferrer"><img style={{ width: '500px', marginTop: '-20px' }} src="images/projects/project-1-logo.png" alt="myFitnessBuddy" /></a>
-            ,
-            title: "myFitnessBuddy",
-            projectInfo:
-                "myFitnessBuddy, a single-page, web application, developed with only Vanilla JavaScript, can serve as your personal workout routine generator. Users can store up to 4 exercises at a time in a dynamic navigation carousel.",
-            technologies: "JavaScript, HTML5/CSS3, ExerciseDB (API)",
-            category: "Health & Fitness",
-            url: {
-                name: "myFitnessBuddy",
-                link: "https://bchoi28.github.io/myFitnessBuddy/",
-            },
-            socialLinks: {
-                github: "https://github.com/bchoi28/myFitnessBuddy",
-            },
-            thumbImage: "images/projects/project-1.png",
-            firstImage: "images/projects/project-1-slide.png",
-            sliderImages: [
-                "images/projects/project-1.gif",
-            ],
-            categories: [filters.JAVASCRIPT],
-        },
-        {
-            id: 2,
             logo: <a href="https://nexus-zblj.onrender.com/" target="_blank" rel="noreferrer" ><img style={{ width: '280px', marginTop: '-10px' }} src="images/projects/project-2-logo-white.png" alt="NexUs" /></a>,
             title: "NexUs",
             projectInfo:
@@ -80,6 +56,31 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
                 "images/projects/project-2-slide-4.png"
             ],
             categories: [filters.JAVASCRIPT, filters.RUBY],
+        },
+        {
+            id: 2,
+            logo:
+                <a href="https://www.brandonchoi.dev/myFitnessBuddy/" target="_blank" rel="noreferrer"><img style={{ width: '500px', marginTop: '-20px' }} src="images/projects/project-1-logo.png" alt="myFitnessBuddy" /></a>
+            ,
+            title: "myFitnessBuddy",
+            projectInfo:
+                "myFitnessBuddy, a single-page, web application, developed with only Vanilla JavaScript, can serve as your personal workout routine generator. Users can store up to 4 exercises at a time in a dynamic navigation carousel.",
+            technologies: "JavaScript, HTML5/CSS3, ExerciseDB (API)",
+            category: "Health & Fitness",
+            url: {
+                name: "myFitnessBuddy",
+                link: "https://www.brandonchoi.dev/myFitnessBuddy/",
+            },
+            socialLinks: {
+                github: "https://github.com/bchoi28/myFitnessBuddy",
+            },
+            // thumbImage: "images/projects/project-1.png",
+            thumbImage: "images/projects/testtest.png",
+            firstImage: "images/projects/project-1-slide.png",
+            sliderImages: [
+                "images/projects/project-1.gif",
+            ],
+            categories: [filters.JAVASCRIPT],
         },
         {
             title: "itinerator",
