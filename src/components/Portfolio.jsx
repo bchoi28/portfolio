@@ -29,7 +29,7 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
     const filters = {
         JAVASCRIPT: "JavaScript",
         RUBY: "Ruby",
-        // PYTHON: "Python",
+        PYTHON: "Python",
     };
 
     const projectsData = [
@@ -119,6 +119,31 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
                 "images/projects/project-3-gif3.gif",
             ],
             categories: [filters.JAVASCRIPT],
+        },
+        {
+            title: "Hive",
+            id: 4,
+            logo: <a href="https://github.com/HivecoreLabs/Hive" target="_blank" rel="noreferrer" ><img style={{ width: '280px', marginTop: '-30px', marginBottom: '-25px' }} src="images/projects/project-4-logo.png" alt="itinerator" /></a>,
+            projectInfo:
+                "Hive is designed to automate employee payout processes, streamline payment breakdowns, and enhance sales tracking, while reducing costly accounting errors.",
+            // client: "Ruby Clinton",
+            technologies: "JavaScript, React, Material UI, Python, Django, SQLite, Electron",
+            category: "Hospitality Management",
+            // date: "July 16, 2019",
+            url: {
+                name: "coming soon",
+                // link: "",
+            },
+            socialLinks: {
+                github: "https://github.com/HivecoreLabs/Hive",
+            },
+            thumbImage: "images/projects/project-4-logo.png",
+            firstImage: "images/projects/project-4-first.png",
+            sliderImages: [
+                "images/projects/project-4-gif1.gif",
+                // "images/projects/project-3-gif3.gif",
+            ],
+            categories: [filters.JAVASCRIPT, filters.PYTHON],
         },
         // {
         //   title: "Project Title 4",
