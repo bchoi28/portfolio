@@ -201,7 +201,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
                                 "text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")
                             }
                         >
-                            My Education
+                            Education
                         </h2>
                         {educationDetails.length > 0 &&
                             educationDetails.map((value, index) => (
@@ -241,7 +241,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
                                 "text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")
                             }
                         >
-                            My Experience
+                            Experience
                         </h2>
                         {experienceDetails.length > 0 &&
                             experienceDetails.map((value, index) => (
@@ -285,8 +285,9 @@ const Resume = ({ classicHeader, darkTheme }) => {
                     }
                     id="my-skills"
                 >
-                    <span >My Technologies</span>
+                    <span >Technologies</span>
                 </h2>
+                <br />
                 {/* <div className="row gx-5">
           {skills.length > 0 &&
             skills.map((skill, index) => (

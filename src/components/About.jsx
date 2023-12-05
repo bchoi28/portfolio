@@ -184,17 +184,17 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                 "text-7 fw-600 mb-3 " + (darkTheme ? "text-white" : "")
                             }
                         >
-                            I'm <span className="text-primary">Brandon Choi,</span> a Full-stack Software Engineer.
+                            I'm <span className="text-primary">Brandon Choi,</span> a Software Engineer.
                         </h2>
                         <p className={darkTheme ? "text-white-50" : ""}>
                             As a former Doctor of Physical Therapy, I have always been driven by an obsession with <strong>detail</strong> and a desire to make a positive impact on people's lives.
-                            My ability to understand complex systems and my passion for solving problems has enabled me to transition (more seamlessly than you might think) from debugging human bodies to engineering the <strong>stack</strong>!
+                            My ability to understand complex systems and my passion for solving problems has enabled me to transition from debugging human bodies to engineering the <strong>full stack</strong>!
                         </p>
                         <p className={darkTheme ? "text-white-50" : ""}>
                             My greatest coding language strengths at the moment are <strong>JavaScript (React, VanillaJS) </strong> and <strong>Ruby</strong>, and I'm currently learning Python and TypeScript. Although my affinity is for coding the full stack, I naturally lean <strong>front-end</strong> because of my love for design and user-centric development.
                         </p>
                         <p className={darkTheme ? "text-white-50" : ""}>
-                            When I'm not expanding my engineering toolkit, you'll likely find me playing basketball with friends, engaging in contemplative reflections on the mysteries of the cosmos, or enjoying a nice batch of sardines &#x1F41f; (lightly smoked).
+                            When I'm not expanding my engineering toolkit, you'll likely find me playing pickup basketball, engaging in contemplative reflections on the mysteries of the cosmos, or enjoying a nice batch of sardines &#x1F41f; (lightly smoked).
                         </p>
                     </div>
                     {/* About me content end */}
@@ -314,7 +314,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                     <span style={{ fontSize: '1rem' }} >Learning:</span>
                                 </h4>
                                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                                    <a style={{ fontSize: '24px' }} href="https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python/2023-05" target="_blank" rel="noreferrer">Python</a>
+                                    <a style={{ fontSize: '28px' }} href="https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python/2023-05" target="_blank" rel="noreferrer">Python</a>
                                 </p>
                             </div>
                         </div>
@@ -326,10 +326,10 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                         (darkTheme ? "text-white-50" : "text-muted")
                                     }
                                 >
-                                    <span style={{ fontSize: '1rem' }}>Reading:</span>
+                                    <span style={{ fontSize: '1rem' }}>Building:</span>
                                 </h4>
                                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                                    <a style={{ fontSize: '24px' }} href="https://eloquentjavascript.net/" target="_blank" rel="noreferrer">Eloquent JavaScript</a>
+                                    <a href="https://github.com/HivecoreLabs/Hive" target="_blank" rel="noreferrer" id="building-click" style={{ fontSize: '28px' }}>Hive</a>
                                 </p>
                                 <br />
                             </div>
@@ -342,10 +342,10 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                         (darkTheme ? "text-white-50" : "text-muted")
                                     }
                                 >
-                                    <span style={{ fontSize: '1rem' }}>Listening:</span>
+                                    <span style={{ fontSize: '1rem' }}>Developing:</span>
                                 </h4>
                                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                                    <a style={{ fontSize: '24px' }} href="https://www.youtube.com/watch?v=LqRZ2_w56U0" target="_blank" rel="noreferrer">Time - Hans Zimmer</a>
+                                    <a style={{ fontSize: '28px' }} href="https://otpotential.com/" target="_blank" rel="noreferrer">OT Potential</a>
                                 </p>
                                 <br />
                             </div>
@@ -358,10 +358,10 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                         (darkTheme ? "text-white-50" : "text-muted")
                                     }
                                 >
-                                    <span style={{ fontSize: '1rem' }}>Growth</span>
+                                    <span style={{ fontSize: '1rem' }}>Drinking:</span>
                                 </h4>
-                                <p style={{ fontSize: '24px' }} className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                                    Mindset                </p>
+                                <a href="https://www.amazon.com/Starbucks-Pumpkin-Flavored-Single-Cup-Brewers/dp/B07TJKP95N/ref=sr_1_16?crid=1QP70Z36ENR34&keywords=pumpkin+spice+latte&qid=1701756238&s=grocery&sprefix=pumpkin+spice+latte%2Cgrocery%2C97&sr=1-16" target="_blank" rel="noreferrer" style={{ fontSize: '28px' }} className={"mb-0 " + (darkTheme ? "text-light" : "")}>
+                                    PSL               </a>
                                 <br />
                             </div>
                         </div>

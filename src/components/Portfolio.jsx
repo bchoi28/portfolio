@@ -130,6 +130,7 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
                 // "images/projects/project-3-gif3.gif",
             ],
             categories: [filters.JAVASCRIPT, filters.PYTHON],
+            building: true
         },
         // {
         //   title: "Project Title 4",
@@ -156,84 +157,6 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
         //     "images/projects/project-4.jpg",
         //   ],
         //   categories: [filters.BRAND, filters.PHOTOS],
-        // },
-        // {
-        //   title: "Project Title 5",
-        //   projectInfo:
-        //     "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-        //   client: "Ruby Clinton",
-        //   technologies: "iOS, HTML5, CSS3, PHP, Java",
-        //   industry: "Art & Design",
-        //   date: "July 16, 2019",
-        //   url: {
-        //     name: "www.example.com",
-        //     link: "https://www.example.com",
-        //   },
-        //   socialLinks: {
-        //     facebook: "http://www.facebook.com/",
-        //     twitter: "http://www.twitter.com/",
-        //     google: "http://www.google.com/",
-        //     instagram: "http://www.instagram.com/",
-        //     mail: "mailto:example@gmail.com",
-        //   },
-        //   thumbImage: "images/projects/project-5.jpg",
-        //   sliderImages: [
-        //     "images/projects/project-1.jpg",
-        //     "images/projects/project-5.jpg",
-        //   ],
-        //   categories: [filters.DESIGN],
-        // },
-        // {
-        //   title: "Project Title 6",
-        //   projectInfo:
-        //     "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-        //   client: "Ruby Clinton",
-        //   technologies: "iOS, HTML5, CSS3, PHP, Java",
-        //   industry: "Art & Design",
-        //   date: "July 16, 2019",
-        //   url: {
-        //     name: "www.example.com",
-        //     link: "https://www.example.com",
-        //   },
-        //   socialLinks: {
-        //     facebook: "http://www.facebook.com/",
-        //     twitter: "http://www.twitter.com/",
-        //     google: "http://www.google.com/",
-        //     instagram: "http://www.instagram.com/",
-        //     mail: "mailto:example@gmail.com",
-        //   },
-        //   thumbImage: "images/projects/project-6.jpg",
-        //   sliderImages: [
-        //     "images/projects/project-1.jpg",
-        //     "images/projects/project-5.jpg",
-        //   ],
-        //   categories: [filters.BRAND],
-        // },
-        // {
-        //   title: "Project Title 7",
-        //   projectInfo:
-        //     "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-        //   client: "Ruby Clinton",
-        //   technologies: "iOS, HTML5, CSS3, PHP, Java",
-        //   industry: "Art & Design",
-        //   date: "July 16, 2019",
-        //   url: {
-        //     name: "www.example.com",
-        //     link: "https://www.example.com",
-        //   },
-        //   socialLinks: {
-        //     facebook: "http://www.facebook.com/",
-        //     twitter: "http://www.twitter.com/",
-        //     google: "http://www.google.com/",
-        //     instagram: "http://www.instagram.com/",
-        //     mail: "mailto:example@gmail.com",
-        //   },
-        //   thumbImage: "images/projects/project-7.jpg",
-        //   sliderImages: [
-        //     "images/projects/project-1.jpg",
-        //     "images/projects/project-5.jpg",
-        //   ],
-        //   categories: [filters.DESIGN, filters.PHOTOS],
         // },
     ];
 
@@ -357,15 +280,15 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
                                                     alt=""
                                                 />
                                                 <div className="portfolio-overlay">
-                                                    <a
+                                                    <div
                                                         className="popup-ajax stretched-link"
-                                                        // href=""
                                                         onClick={() => {
                                                             setSelectedProjectDetails(projectsData[index]);
                                                         }}
                                                         data-bs-toggle="modal"
                                                         data-bs-target="#exampleModal"
-                                                    />
+                                                    >
+                                                    </div>
                                                     <div className="portfolio-overlay-details">
                                                         <h5 className="text-white fw-400">
                                                             {project.title}

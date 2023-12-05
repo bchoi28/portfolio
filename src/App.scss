@@ -93,3 +93,14 @@
         color: #1baa80;
     }
 }
+
+#building-click {
+    color: #20c997;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 400;
+
+    &:hover {
+        color: #1baa80;
+    }
+}
