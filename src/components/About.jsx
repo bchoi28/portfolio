@@ -194,7 +194,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                             My expertise is <strong>JavaScript</strong> (React, VanillaJS) and <strong>Ruby/Rails</strong>, and I'm currently diving into <strong>Python/Django</strong>. While my affinity is for the <strong>full stack</strong>, my heart lies in the <strong>front-end</strong>, where I can blend my love for design with a user-centric approach to develop enjoyable web experiences.
                         </p>
                         <p className={darkTheme ? "text-white-50" : ""}>
-                            When I'm not expanding my engineering toolkit, you'll likely find me playing pickup basketball, engaging in contemplative reflections on the mysteries of the cosmos, or enjoying a nice batch of sardines &#x1F41f; (lightly smoked).
+                            When I'm not expanding my engineering toolkit, you'll likely find me playing pickup basketball, engaging in contemplative reflections on the mysteries of the cosmos, or enjoying a nice batch of sardines &#x1F41f;.
                         </p>
                     </div>
                     {/* About me content end */}

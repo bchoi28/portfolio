@@ -50,24 +50,24 @@ const Resume = ({ classicHeader, darkTheme }) => {
             yearRange: "2022 - 2023",
             title: "Software Engineering",
             place: "App Academy, NYC",
-            desc: <p>1200+ hours intensive, <strong>in-person</strong> curriculum with a focus on full-stack web development, API design, database management systems, data structures & algorithms, <strong>object-oriented programming</strong>, and paired programming.</p>,
-            desc2: <p>&lt;3% acceptance rate, 15-20% attrition rate</p>,
-            desc3: 'JavaScript(React/Redux, vanilla JS, Express/Node), Ruby, Ruby on Rails, HTML/CSS, SQL, PostgreSQL, MongoDB, and many more!',
+            // desc: <p>1200+ hours intensive, <strong>in-person</strong> curriculum with a focus on full-stack web development, API design, database management systems, data structures & algorithms, <strong>object-oriented programming</strong>, and paired programming.</p>,
+            // desc2: <p>&lt;3% acceptance rate, 15-20% attrition rate</p>,
+            // desc3: 'JavaScript(React/Redux, vanilla JS, Express/Node), Ruby, Ruby on Rails, HTML/CSS, SQL, PostgreSQL, MongoDB, and many more!',
         },
         {
             yearRange: "2016 - 2019",
             title: "Doctor of Physical Therapy (DPT)",
-            place: "Emory University, GA",
-            desc: <p><em>summa cum laude</em>, GPA 4.0</p>,
-            desc2: <p>Successfully published a research paper centered around the development of <strong>data-driven algorithms</strong> to personalize interventions for post-stroke patients based on real-time biofeedback.</p>,
-            desc3: <p>Allied Health Representative - Institute for Healthcare Improvement (IHI)</p>
+            place: "Emory University, GA - GPA: 4.0",
+            // desc: <p><em>summa cum laude</em>, GPA 4.0</p>,
+            // desc2: <p>Successfully published a research paper centered around the development of <strong>data-driven algorithms</strong> to personalize interventions for post-stroke patients based on real-time biofeedback.</p>,
+            // desc3: <p>Allied Health Representative - Institute for Healthcare Improvement (IHI)</p>
         },
         {
             yearRange: "2011 - 2015",
             title: "B.A. in Psychology",
-            place: "Boston College, MA",
-            desc: <p><em>magna cum laude</em>, GPA 3.8</p>,
-            desc2: "Co-President of Psi Chi Psychology Honor Society"
+            place: "Boston College, MA - GPA: 3.8",
+            // desc: <p><em>magna cum laude</em>, GPA 3.8</p>,
+            // desc2: "Co-President of Psi Chi Psychology Honor Society"
         },
         // {
         //   yearRange: "2011 - 2015",
@@ -80,36 +80,36 @@ const Resume = ({ classicHeader, darkTheme }) => {
 
     const experienceDetails = [
         {
+            yearRange: "Nov 2023 - Present",
+            title: "Full-stack Engineer, Contract",
+            place: <a rel='noreferrer' href="https://otpotential.com/" target="_blank">OT Potential</a>,
+            // desc: <p>Design and implement a dynamic banner on Club OT Potential, the primary UI for members, with call-to-actions tailored to subscription tier (anonymous, free trial, paid) to enhance user engagement and conversion rates</p>
+        },
+        {
             yearRange: "Oct 2023 - Present",
             title: "Front-end Engineer, Freelance",
-            place: "Watershed Hospitality",
-            desc: <p><strong>Direct</strong> the <strong>front-end development</strong> through an Agile/Jira workflow for a cross-platform, open-source desktop application
-            </p>,
-            desc2: <p>Oversee the design, implementation, and optimization of an internal payroll software tool, working closely with a UX designer and the back-end team to ensure a user-centric and high-performance solution.</p>,
-            desc3: <p>Collaborate closely with various stakeholders, including department heads and IT teams, to gather requirements, identify user experience pain points, and implement responsive design enhancements</p>,
-            desc4: <p>Achieve an estimated <strong>2-hr/day reduction</strong> in workload by automating employee payouts, streamlining payment breakdowns, and enhancing sales tracking, preventing costly accounting errors previously caused by manual Google Sheets input</p>,
+            place: <a href="https://www.watershedtulsa.com/" target="_blank" rel='noreferrer'>Watershed Hospitality</a>,
+            // desc: <p><strong>Direct</strong> the <strong>front-end development</strong> through an Agile/Jira workflow for a cross-platform, open-source desktop application
+            // </p>,
+            // desc2: <p>Oversee the design, implementation, and optimization of an internal payroll software tool, working closely with a UX designer and the back-end team to ensure a user-centric and high-performance solution.</p>,
+            // desc3: <p>Collaborate closely with various stakeholders, including department heads and IT teams, to gather requirements, identify user experience pain points, and implement responsive design enhancements</p>,
+            // desc4: <p>Achieve an estimated <strong>2-hr/day reduction</strong> in workload by automating employee payouts, streamlining payment breakdowns, and enhancing sales tracking, preventing costly accounting errors previously caused by manual Google Sheets input</p>,
         },
         {
             yearRange: "Oct 2023 - Present",
             title: "Computer Science AI Trainer",
-            place: "Scale AI",
-            desc: <p>Critique and correct a series of <strong>computer science</strong> and programming-related responses produced by GPT-3.5 in terms of explanation quality, style and formatting, code functionality and performance, relevance, and security to fine-tune the AI model.</p>,
-            desc2: <p>Scale AI is OpenAI's preferred partner in fine-tuning GPT-3.5.</p>,
+            place: <a href="https://scale.com/" target="_blank" rel="noreferrer">Scale AI</a>,
+            // desc: <p>Critique and correct a series of <strong>computer science</strong> and programming-related responses produced by GPT-3.5 in terms of explanation quality, style and formatting, code functionality and performance, relevance, and security to fine-tune the AI model.</p>,
+            // desc2: <p>Scale AI is OpenAI's preferred partner in fine-tuning GPT-3.5.</p>,
         },
         {
             yearRange: "Jan - Sep 2022",
             title: "Physical Therapist",
-            place: "New York Therapy & Wellness, NY",
-            desc: <p>Programmed a <strong>Ruby script</strong> to <strong>automate</strong> the creation of personalized home exercise programs for patients, considering their impairments, functional levels, and goals, reducing average documentation time per treatment note by <strong>~13.3%.</strong></p>,
-            desc2: <p>Spearheaded the establishment of a venture with renowned senior living facility Aterot Avot, assuming the role as the <em>exclusive</em> Physical Therapist and ambassador <strong>overseeing</strong> the plan of care of ~15 residents concurrently.</p>,
-            desc3: <p>Managed a caseload of 25+ clients across South Brooklyn, ensuring seamless communication among various stakeholders, including family members, insurance providers, and physicians to maximize client and <em>stakeholder satisfaction.</em></p>
+            place: <a target="_blank" rel="noreferrer" href="http://www.nytherapyandwellness.com/">New York Therapy & Wellness, NY</a>,
+            // desc: <p>Programmed a <strong>Ruby script</strong> to <strong>automate</strong> the creation of personalized home exercise programs for patients, considering their impairments, functional levels, and goals, reducing average documentation time per treatment note by <strong>~13.3%.</strong></p>,
+            // desc2: <p>Spearheaded the establishment of a venture with renowned senior living facility Aterot Avot, assuming the role as the <em>exclusive</em> Physical Therapist and ambassador <strong>overseeing</strong> the plan of care of ~15 residents concurrently.</p>,
+            // desc3: <p>Managed a caseload of 25+ clients across South Brooklyn, ensuring seamless communication among various stakeholders, including family members, insurance providers, and physicians to maximize client and <em>stakeholder satisfaction.</em></p>
         },
-        // {
-        //   yearRange: "2017 - 2019",
-        //   title: "Product Designer",
-        //   place: "Adobe",
-        //   desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-        // },
     ];
 
     // const skills = [
@@ -192,48 +192,10 @@ const Resume = ({ classicHeader, darkTheme }) => {
                         </span>
                     </a>
                 </div>
+                <br />
+                <br />
                 {/* Heading end*/}
                 <div className="row gx-5">
-                    {/* My Education */}
-                    <div className="col-md-6">
-                        <h2
-                            className={
-                                "text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")
-                            }
-                        >
-                            Education
-                        </h2>
-                        {educationDetails.length > 0 &&
-                            educationDetails.map((value, index) => (
-                                <div
-                                    key={index}
-                                    className={
-                                        "bg-white  rounded p-4 mb-4 " +
-                                        (darkTheme ? "bg-dark" : "bg-white border")
-                                    }
-                                >
-                                    <div className="badge bg-secondary text-2 fw-400" style={{ marginBottom: '20px' }}>
-                                        {value.yearRange}
-                                    </div>
-                                    <h3 className={"text-5 " + (darkTheme ? "text-white" : "")}>
-                                        {value.title}
-                                    </h3>
-                                    <div className={darkTheme ? "text-primary" : "text-danger"}>
-                                        {value.place}
-                                    </div>
-                                    <br />
-                                    <div className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
-                                        {value.desc}
-                                    </div>
-                                    <div className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
-                                        {value.desc2}
-                                    </div>
-                                    <div className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
-                                        {value.desc3}
-                                    </div>
-                                </div>
-                            ))}
-                    </div>
                     {/* My Experience */}
                     <div className="col-md-6">
                         <h2
@@ -248,7 +210,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
                                 <div
                                     key={index}
                                     className={
-                                        "bg-white  rounded p-4 mb-4 " +
+                                        "experience-bubble bg-white  rounded p-4 mb-4 " +
                                         (darkTheme ? "bg-dark" : "bg-white border")
                                     }
                                 >
@@ -261,7 +223,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
                                     <div className={darkTheme ? "text-primary" : "text-danger"}>
                                         {value.place}
                                     </div>
-                                    <br />
+                                    {/* <br /> */}
                                     <div className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
                                         {value.desc}
                                     </div>
@@ -273,6 +235,46 @@ const Resume = ({ classicHeader, darkTheme }) => {
                                     </div>
                                     <div className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
                                         {value.desc4}
+                                    </div>
+                                </div>
+                            ))}
+                    </div>
+                    {/* My Education */}
+                    <div className="col-md-6">
+                        <h2
+                            className={
+                                "text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")
+                            }
+                        >
+                            Education
+                        </h2>
+                        {educationDetails.length > 0 &&
+                            educationDetails.map((value, index) => (
+                                <div
+                                    key={index}
+                                    className={
+                                        "education-bubble bg-white  rounded p-4 mb-4 " +
+                                        (darkTheme ? "bg-dark" : "bg-white border")
+                                    }
+                                >
+                                    <div className="badge bg-secondary text-2 fw-400" style={{ marginBottom: '20px' }}>
+                                        {value.yearRange}
+                                    </div>
+                                    <h3 className={"text-5 " + (darkTheme ? "text-white" : "")}>
+                                        {value.title}
+                                    </h3>
+                                    <div className={darkTheme ? "text-primary" : "text-danger"}>
+                                        {value.place}
+                                    </div>
+                                    {/* <br /> */}
+                                    <div className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                                        {value.desc}
+                                    </div>
+                                    <div className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                                        {value.desc2}
+                                    </div>
+                                    <div className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                                        {value.desc3}
                                     </div>
                                 </div>
                             ))}

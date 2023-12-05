@@ -104,3 +104,17 @@
         color: #1baa80;
     }
 }
+
+.experience-bubble,
+.education-bubble {
+    transform: scale(1);
+    // transition: transform ease-out 0.2s;
+    transition: transform ease 0.3s;
+}
+
+.experience-bubble:hover,
+.education-bubble:hover {
+    transform: scale(1.1);
+    // transition: transform ease 0.1s;
+    transition: transform ease 0.1s;
+}
