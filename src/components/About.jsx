@@ -188,10 +188,10 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                         </h2>
                         <p className={darkTheme ? "text-white-50" : ""}>
                             As a former Doctor of Physical Therapy, I have always been driven by an obsession with <strong>detail</strong> and a desire to make a positive impact on people's lives.
-                            My ability to understand complex systems and my passion for solving problems has enabled me to transition from debugging human bodies to engineering the <strong>full stack</strong>!
+                            My ability to understand complex systems and my passion for solving problems has enabled me to transition from debugging human bodies to engineering the tech stack.
                         </p>
                         <p className={darkTheme ? "text-white-50" : ""}>
-                            My greatest coding language strengths at the moment are <strong>JavaScript (React, VanillaJS) </strong> and <strong>Ruby</strong>, and I'm currently learning Python and TypeScript. Although my affinity is for coding the full stack, I naturally lean <strong>front-end</strong> because of my love for design and user-centric development.
+                            My expertise is <strong>JavaScript</strong> (React, VanillaJS) and <strong>Ruby/Rails</strong>, and I'm currently diving into <strong>Python/Django</strong>. While my affinity is for the <strong>full stack</strong>, my heart lies in the <strong>front-end</strong>, where I can blend my love for design with a user-centric approach to develop enjoyable web experiences.
                         </p>
                         <p className={darkTheme ? "text-white-50" : ""}>
                             When I'm not expanding my engineering toolkit, you'll likely find me playing pickup basketball, engaging in contemplative reflections on the mysteries of the cosmos, or enjoying a nice batch of sardines &#x1F41f; (lightly smoked).
