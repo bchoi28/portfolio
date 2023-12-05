@@ -285,7 +285,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
                     }
                     id="my-skills"
                 >
-                    My Technologies
+                    <span >My Technologies</span>
                 </h2>
                 {/* <div className="row gx-5">
           {skills.length > 0 &&

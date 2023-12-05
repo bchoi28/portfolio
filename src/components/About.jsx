@@ -254,7 +254,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                     <span>{codingLanguagesNum}</span>
                                 </h4>
                                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                                    <div style={{ color: '#20c997', cursor: 'pointer' }} id="coding-languages">Coding Languages</div>
+                                    <div id="coding-languages" >Coding Languages</div>
                                 </p>
                             </div>
                         </div>
@@ -311,10 +311,10 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                         (darkTheme ? "text-white-50" : "text-muted")
                                     }
                                 >
-                                    <span style={{ fontSize: '34px' }}>Learning:</span>
+                                    <span style={{ fontSize: '1rem' }} >Learning:</span>
                                 </h4>
                                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                                    <a href="https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python/2023-05" target="_blank" rel="noreferrer">Python</a>
+                                    <a style={{ fontSize: '24px' }} href="https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python/2023-05" target="_blank" rel="noreferrer">Python</a>
                                 </p>
                             </div>
                         </div>
@@ -326,10 +326,10 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                         (darkTheme ? "text-white-50" : "text-muted")
                                     }
                                 >
-                                    <span style={{ fontSize: '34px' }}>Reading:</span>
+                                    <span style={{ fontSize: '1rem' }}>Reading:</span>
                                 </h4>
                                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                                    <a href="https://eloquentjavascript.net/" target="_blank" rel="noreferrer">Eloquent JavaScript</a>
+                                    <a style={{ fontSize: '24px' }} href="https://eloquentjavascript.net/" target="_blank" rel="noreferrer">Eloquent JavaScript</a>
                                 </p>
                                 <br />
                             </div>
@@ -342,10 +342,10 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                         (darkTheme ? "text-white-50" : "text-muted")
                                     }
                                 >
-                                    <span style={{ fontSize: '34px' }}>Listening:</span>
+                                    <span style={{ fontSize: '1rem' }}>Listening:</span>
                                 </h4>
                                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                                    <a href="https://www.youtube.com/watch?v=LqRZ2_w56U0" target="_blank" rel="noreferrer">Time (10-hour loop) - Hans Zimmer</a>
+                                    <a style={{ fontSize: '24px' }} href="https://www.youtube.com/watch?v=LqRZ2_w56U0" target="_blank" rel="noreferrer">Time - Hans Zimmer</a>
                                 </p>
                                 <br />
                             </div>
@@ -358,9 +358,9 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                         (darkTheme ? "text-white-50" : "text-muted")
                                     }
                                 >
-                                    <span style={{ fontSize: '34px' }}>Growth</span>
+                                    <span style={{ fontSize: '1rem' }}>Growth</span>
                                 </h4>
-                                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
+                                <p style={{ fontSize: '24px' }} className={"mb-0 " + (darkTheme ? "text-light" : "")}>
                                     Mindset                </p>
                                 <br />
                             </div>
@@ -369,7 +369,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                 </div>
                 {/* projects rewards counting end */}
             </div>
-        </section>
+        </section >
     );
 };
 
