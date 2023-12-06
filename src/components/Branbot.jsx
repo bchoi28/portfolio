@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 const Branbot = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isClosing, setIsClosing] = useState(false);
+
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
 
@@ -13,8 +15,16 @@ const Branbot = () => {
         textarea.style.height = `${textarea.scrollHeight}px`;
     }
 
-    const toggleChat = () => {
-        setIsOpen(prevState => !prevState);
+    const toggleOpen = () => {
+        setIsOpen(true);
+    }
+
+    const toggleClose = () => {
+        setIsClosing(true);
+        setTimeout(() => {
+            setIsOpen(false);
+            setIsClosing(false)
+        }, 250)
     }
 
     const handleSendMessage = (e) => {
@@ -49,32 +59,38 @@ const Branbot = () => {
 
 
     return (
-        <div className="chatbot-container">
-            <button onClick={toggleChat} className="chatbot-toggle">
-                {!isOpen && 'Chat with Branbot'}
-                {isOpen && <span onClick={toggleChat} className="close-icon">&times;</span>}
-            </button>
+        <div className="chatbot-wrapper">
+
+            {!isOpen && (
+                <button onClick={toggleOpen} className="chatbot-toggle">
+                    Chat with Branbot
+                </button>
+            )}
 
             {isOpen && (
-                <div className="chat-interface">
-                    <div className="messages">
-                        {messages.map((msg, index) => (
-                            <div key={index} className={`message ${msg.sender === 'user' ? 'user-message' : 'bot-message'}`}>
-                                {msg.text}
-                            </div>
-                        ))}
+                <div className={`chatbot-container ${isOpen ? 'open' : ''} ${isClosing ? 'closing' : ''}`}>
+                    <div onClick={toggleClose} className="close-icon">&times;</div>
+
+                    <div className='chatbot-interface'>
+                        <div className="messages">
+                            {messages.map((msg, index) => (
+                                <div key={index} className={`message ${msg.sender === 'user' ? 'user-message' : 'bot-message'}`}>
+                                    {msg.text}
+                                </div>
+                            ))}
+                        </div>
+                        <form className='message-form' onSubmit={handleSendMessage}>
+                            <textarea
+                                className='message-input'
+                                value={message}
+                                onChange={handleMessage}
+                                placeholder="Message Branbot..."
+                            />
+                            <button disabled={!message} type='submit' className='send-button'>
+                                <i className="fas fa-arrow-up"></i>
+                            </button>
+                        </form>
                     </div>
-                    <form className='message-form' onSubmit={handleSendMessage}>
-                        <textarea
-                            className='message-input'
-                            value={message}
-                            onChange={handleMessage}
-                            placeholder="Message Branbot..."
-                        />
-                        <button disabled={!message} type='submit' className='send-button'>
-                            <i className="fas fa-arrow-up"></i>
-                        </button>
-                    </form>
                 </div>
             )}
         </div>

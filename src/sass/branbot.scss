@@ -1,21 +1,80 @@
-.chatbot-container {
+.chatbot-wrapper {
     position: fixed;
     bottom: 20px;
     right: 70px;
     z-index: 10;
+}
+
+.chatbot-toggle {
+    position: relative;
+    z-index: 11;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: #CCC;
+    padding: 3px 10px 2px 10px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+
+    &:hover {
+        background-color: #B8B8B8;
+        transform: scale(1.1);
+    }
+}
+
+.chatbot-container {
+    position: relative;
+    z-index: 10;
     background-color: #343541;
     border-radius: 10px;
+    z-index: 10;
+
+    &.open {
+        animation: slideUp 0.3s ease-in-out forwards;
+    }
+
+    &.closing {
+        animation: slideDown 0.3s ease-in-out forwards;
+        transition: opacity 0.5s;
+        opacity: 0;
+    }
 }
 
-.chat-interface {
-    // border-radius: 10px;
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(100%);
+    }
+
+}
+
+.chatbot-interface {
     padding: 15px;
     width: 300px;
-    height: 400px;
     display: flex;
     flex-direction: column;
+    height: 400px;
+    z-index: 12;
 }
-
 
 .messages {
     flex-grow: 1;
@@ -75,8 +134,6 @@
         color: #CCC;
     }
 }
-
-
 
 .send-button {
     position: absolute;
