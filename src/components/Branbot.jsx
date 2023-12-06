@@ -92,7 +92,7 @@ const Branbot = () => {
             {!isOpen && (
                 <Tooltip text='Hi! Have any questions?' placement='left'>
                     <div className='branbot-toggle-container'>
-                        <img className='branbot-toggle' onClick={toggleOpen} src={BranbotIcon} alt='bot' />
+                        <img className='branbot-logo' onClick={toggleOpen} src={BranbotIcon} alt='bot' />
                         <img className='branbot-wave' src={Wave} alt='wave' />
                     </div>
                 </Tooltip>

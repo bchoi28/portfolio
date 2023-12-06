@@ -254,7 +254,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                     <span>{codingLanguagesNum}</span>
                                 </h4>
                                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                                    <div id="coding-languages" >Coding Languages</div>
+                                    <span id="coding-languages" >Coding Languages</span>
                                 </p>
                             </div>
                         </div>

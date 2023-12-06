@@ -23,7 +23,7 @@
     transition: opacity 0.2s ease;
 }
 
-.branbot-toggle {
+.branbot-logo {
     position: relative;
     z-index: 11;
     bottom: 0px;
@@ -38,7 +38,7 @@
     }
 }
 
-.branbot-toggle:hover+.branbot-wave {
+.branbot-logo:hover+.branbot-wave {
     opacity: 1;
     transition: opacity 0.2s ease;
     animation: wiggle 0.5s ease-in-out infinite;
