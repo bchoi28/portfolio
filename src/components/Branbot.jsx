@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import BranbotIcon from '../branbot.svg';
+import Wave from '../wave.svg';
+import { Tooltip } from './Tooltip';
 
 const Branbot = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -6,6 +9,8 @@ const Branbot = () => {
 
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
+
+
 
     const handleMessage = (e) => {
         const textarea = e.target;
@@ -31,6 +36,16 @@ const Branbot = () => {
         e.preventDefault();
         sendMessage(message);
     }
+
+    const handleTestMessage = (e) => {
+        e.preventDefault();
+        sendTestMessage(message);
+    }
+
+    const sendTestMessage = (userMessage) => {
+        setMessages(prevMessages => [...prevMessages, { sender: 'user', text: userMessage }]);
+    }
+
     const sendMessage = async (userMessage) => {
         // Add the user's message to the chat
         setMessages(prevMessages => [...prevMessages, { sender: 'user', text: userMessage }]);
@@ -57,14 +72,30 @@ const Branbot = () => {
         }
     };
 
+    // Function to add a bot message to introduce Branbot
+    const introduceBot = () => {
+        const introMessage = "Hi, I'm Branbot. Ask me anything about Brandon, and I'll do my best to answer!";
+        setMessages(prevMessages => [...prevMessages, { sender: 'bot', text: introMessage }]);
+    };
+
+    useEffect(() => {
+        // When the chatbot opens, introduce Branbot
+        if (isOpen && messages.length === 0) {
+            introduceBot();
+        }
+    }, [isOpen]);
+
 
     return (
         <div className="chatbot-wrapper">
 
             {!isOpen && (
-                <button onClick={toggleOpen} className="chatbot-toggle">
-                    Chat with Branbot
-                </button>
+                <Tooltip text='Hi! Have any questions?' placement='left'>
+                    <div className='branbot-toggle-container'>
+                        <img className='branbot-toggle' onClick={toggleOpen} src={BranbotIcon} alt='bot' />
+                        <img className='branbot-wave' src={Wave} alt='wave' />
+                    </div>
+                </Tooltip>
             )}
 
             {isOpen && (
@@ -79,7 +110,7 @@ const Branbot = () => {
                                 </div>
                             ))}
                         </div>
-                        <form className='message-form' onSubmit={handleSendMessage}>
+                        <form className='message-form' onSubmit={handleTestMessage}>
                             <textarea
                                 className='message-input'
                                 value={message}

@@ -1,13 +1,59 @@
 .chatbot-wrapper {
     position: fixed;
     bottom: 20px;
-    right: 70px;
+    right: 50px;
     z-index: 10;
 }
 
 .chatbot-toggle {
     position: relative;
     z-index: 11;
+}
+
+.branbot-toggle-container {
+    position: relative;
+}
+
+.branbot-wave {
+    position: absolute;
+    opacity: 0;
+    top: -20px;
+    left: -30px;
+    height: 30px;
+    transition: opacity 0.2s ease;
+}
+
+.branbot-toggle {
+    position: relative;
+    z-index: 11;
+    bottom: 0px;
+    right: 0px;
+    height: 60px;
+    z-index: 15;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: transform 0.2s ease;
+    }
+}
+
+.branbot-toggle:hover+.branbot-wave {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    animation: wiggle 0.5s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+
+    0%,
+    100% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
 }
 
 .close-icon {
@@ -18,7 +64,7 @@
     color: white;
     background-color: #CCC;
     padding: 3px 10px 2px 10px;
-    border-radius: 50%;
+    border-radius: 8px;
     transition: background-color 0.2s ease, transform 0.1s ease;
 
     &:hover {
@@ -85,7 +131,7 @@
     padding: 5px 10px;
     border-radius: 5px;
     margin-bottom: 10px;
-    max-width: 80%;
+    max-width: 85%;
 }
 
 .user-message {
@@ -142,6 +188,14 @@
     border-radius: 10px;
     width: 35px;
     height: 35px;
+}
+
+.branbot-icon {
+    position: absolute;
+    // bottom: px;
+    right: 0px;
+    height: 200px;
+    z-index: 15;
 }
 
 @media (max-width: 600px) {

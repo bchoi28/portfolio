@@ -108,7 +108,7 @@ function App() {
           ></Footer> */}
         </div>
         {/* back to top */}
-        <Tooltip text="Back to Top" placement="left">
+        {/* <Tooltip text="Back to Top" placement="left">
           <span
             id="back-to-top"
             className="rounded-circle"
@@ -119,10 +119,8 @@ function App() {
           >
             <i className="fa fa-chevron-up"></i>
           </span>
-        </Tooltip>
-        <Branbot/>
-        {/* <TermsAndConditions darkTheme={darkTheme}></TermsAndConditions> */}
-        {/* <Disclaimer darkTheme={darkTheme}></Disclaimer> */}
+        </Tooltip> */}
+            <Branbot/>
       </div>
     </>
   );
