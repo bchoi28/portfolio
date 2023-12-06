@@ -51,7 +51,8 @@ const Branbot = () => {
     return (
         <div className="chatbot-container">
             <button onClick={toggleChat} className="chatbot-toggle">
-                {isOpen ? 'Close Chat' : 'Chat with Branbot'}
+                {!isOpen && 'Chat with Branbot'}
+                {isOpen && <span onClick={toggleChat} className="close-icon">&times;</span>}
             </button>
 
             {isOpen && (
