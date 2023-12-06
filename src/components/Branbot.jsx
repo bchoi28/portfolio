@@ -40,7 +40,15 @@ const Branbot = () => {
     const handleTestMessage = (e) => {
         e.preventDefault();
         sendTestMessage(message);
+        setMessage('')
     }
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault(); // Prevents adding a new line in the textarea
+            handleTestMessage(e); // Calls your form's submit handler
+        }
+    };
 
     const sendTestMessage = (userMessage) => {
         setMessages(prevMessages => [...prevMessages, { sender: 'user', text: userMessage }]);
@@ -100,7 +108,12 @@ const Branbot = () => {
 
             {isOpen && (
                 <div className={`chatbot-container ${isOpen ? 'open' : ''} ${isClosing ? 'closing' : ''}`}>
-                    <div onClick={toggleClose} className="close-icon">&times;</div>
+                    <div className='chatbot-header'>
+                        <img className='branbot-logo-header' src={BranbotIcon} alt="bot" />
+                        {/* <i className="fas fa-robot"></i> */}
+                        <div className='chatbot-header-text'>Branbot</div>
+                        <div onClick={toggleClose} className="close-icon">&times;</div>
+                    </div>
 
                     <div className='chatbot-interface'>
                         <div className="messages">
@@ -115,6 +128,7 @@ const Branbot = () => {
                                 className='message-input'
                                 value={message}
                                 onChange={handleMessage}
+                                onKeyDown={handleKeyDown}
                                 placeholder="Message Branbot..."
                             />
                             <button disabled={!message} type='submit' className='send-button'>
