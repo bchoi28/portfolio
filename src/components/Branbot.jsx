@@ -44,7 +44,7 @@ const Chatbot = () => {
                 <div className="chat-interface">
                     <div className="messages">
                         {messages.map((msg, index) => (
-                            <div key={index} className={`message ${msg.sender}`}>
+                            <div key={index} className={`message ${msg.sender === 'user' ? 'user-message' : 'bot-message'}`}>
                                 {msg.text}
                             </div>
                         ))}

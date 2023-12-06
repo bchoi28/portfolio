@@ -21,15 +21,20 @@
 }
 
 .message {
-    margin-bottom: 10px;
     padding: 5px 10px;
     border-radius: 5px;
-    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    max-width: 80%;
 }
 
-.message.user {
+.user-message {
     background-color: #d0f0d0;
     align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #f0f0f0;
+    align-self: flex-start;
 }
 
 .message-input,
