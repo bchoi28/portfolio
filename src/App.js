@@ -15,6 +15,7 @@ import { commonConfig } from "./config/commonConfig";
 // import Disclaimer from "./components/Disclaimer";
 import PreLoader from "./components/Preloader";
 import { Tooltip } from "./components/Tooltip";
+import Branbot from "./components/Branbot";
 
 function App() {
   const classicHeader = commonConfig.classicHeader;
@@ -119,7 +120,7 @@ function App() {
             <i className="fa fa-chevron-up"></i>
           </span>
         </Tooltip>
-
+        <Branbot/>
         {/* <TermsAndConditions darkTheme={darkTheme}></TermsAndConditions> */}
         {/* <Disclaimer darkTheme={darkTheme}></Disclaimer> */}
       </div>

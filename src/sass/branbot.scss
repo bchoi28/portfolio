@@ -1,11 +1,13 @@
 .chatbot-container {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 70px;
+    z-index: 10;
+    background-color: #343541;
+    border-radius: 10px;
 }
 
 .chat-interface {
-    background: white;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     padding: 15px;
@@ -13,6 +15,8 @@
     height: 400px;
     display: flex;
     flex-direction: column;
+    // background-color: transparent;
+    background-color: #343541;
 }
 
 .messages {
@@ -37,12 +41,61 @@
     align-self: flex-start;
 }
 
-.message-input,
-.send-button {
-    margin-top: 10px;
+.message-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 12.8px;
+    min-height: 50px;
+    overflow: hidden;
+
+    &:focus-visible {
+        outline: none;
+    }
 }
 
-/* Responsive Styles */
+
+.message-input {
+    width: 80%;
+    height: 35px;
+    max-height: 200px;
+    resize: none;
+    border: transparent;
+    background-color: transparent;
+    padding: 5px;
+    color: white;
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: #CCC;
+    }
+}
+
+
+
+.send-button {
+    position: absolute;
+    right: 5px;
+    bottom: 6px;
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+}
+
+.send-button.disabled {
+    position: absolute;
+    right: 5px;
+    bottom: 6px;
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+}
+
 @media (max-width: 600px) {
     .chat-interface {
         width: 100%;

@@ -1,12 +1,26 @@
 import React, { useState } from 'react';
-import './Chatbot.css'; // Import your CSS file
 
-const Chatbot = () => {
+const Branbot = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
 
-    const toggleChat = () => setIsOpen(!isOpen);
+    const handleMessage = (e) => {
+        const textarea = e.target;
+        setMessage(textarea.value);
 
+        textarea.style.height = '35px';
+        textarea.style.height = `${textarea.scrollHeight}px`;
+    }
+
+    const toggleChat = () => {
+        setIsOpen(prevState => !prevState);
+    }
+
+    const handleSendMessage = (e) => {
+        e.preventDefault();
+        sendMessage(message);
+    }
     const sendMessage = async (userMessage) => {
         // Add the user's message to the chat
         setMessages(prevMessages => [...prevMessages, { sender: 'user', text: userMessage }]);
@@ -49,17 +63,21 @@ const Chatbot = () => {
                             </div>
                         ))}
                     </div>
-                    <input
-                        type="text"
-                        className="message-input"
-                        placeholder="Type a message..."
-                    // Implement logic to capture input and send messages
-                    />
-                    <button className="send-button">Send</button>
+                    <form className='message-form' onSubmit={handleSendMessage}>
+                        <textarea
+                            className='message-input'
+                            value={message}
+                            onChange={handleMessage}
+                            placeholder="Message Branbot..."
+                        />
+                        <button disabled={!message} type='submit' className='send-button'>
+                            <i className="fas fa-arrow-up"></i>
+                        </button>
+                    </form>
                 </div>
             )}
         </div>
     );
 };
 
-export default Chatbot;
+export default Branbot;
