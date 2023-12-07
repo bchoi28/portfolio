@@ -167,6 +167,7 @@
 .messages {
     flex-grow: 1;
     overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 .message {
@@ -274,4 +275,8 @@
         height: 100%;
         border-radius: 0;
     }
+}
+
+.test-reply {
+    margin-bottom: 0;
 }

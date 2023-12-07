@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import BranbotIcon from '../branbot.svg';
 import BranbotLogoText from '../branbot_logo_text.svg';
-import Wave from '../wave.svg';
+// import WaveBlue from '../wave.svg';
 import WaveGreen from '../wave_green.svg';
 import { Tooltip } from './Tooltip';
 
 const Branbot = () => {
+
+    const messagesContainerRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
 
@@ -34,75 +36,94 @@ const Branbot = () => {
         }, 250)
     }
 
-    const handleSendMessage = (e) => {
-        e.preventDefault();
-        sendMessage(message);
-    }
-
     const handleTestMessage = (e) => {
         e.preventDefault();
         sendTestMessage(message);
         setMessage('')
+
+        // test reply for now
+        setTimeout(() => {
+            setMessages((prevMessages) => {
+                return [
+                    ...prevMessages,
+                    {
+                        sender: 'bot',
+                        text: (
+                            <div className='test-reply'>
+                                My apologies, I am still under construction. Come back soon
+                                and we'll chat :)
+                                <br />
+                                In the meantime, check out a recent project of Brandon's <a href="https://nexus-zblj.onrender.com/" target="_blank" rel="noopener noreferrer">here!</a>
+                            </div>
+                        ),
+                    },
+                ];
+            });
+        }, 1000);
     }
 
     const handleKeyDown = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
-            e.preventDefault(); // Prevents adding a new line in the textarea
-            handleTestMessage(e); // Calls your form's submit handler
+            e.preventDefault();
+            handleTestMessage(e);
         }
     };
+
+    // const handleSendMessage = (e) => {
+    //     e.preventDefault();
+    //     sendMessage(message);
+    // }
 
     const sendTestMessage = (userMessage) => {
         setMessages(prevMessages => [...prevMessages, { sender: 'user', text: userMessage }]);
     }
 
-    const sendMessage = async (userMessage) => {
-        // Add the user's message to the chat
-        setMessages(prevMessages => [...prevMessages, { sender: 'user', text: userMessage }]);
+    // const sendMessage = async (userMessage) => {
+    //     setMessages(prevMessages => [...prevMessages, { sender: 'user', text: userMessage }]);
 
-        try {
-            // Prepare the conversation history for the Lambda function
-            const conversationHistory = messages.map(msg => {
-                return {
-                    role: msg.sender === 'user' ? 'user' : 'system',
-                    content: msg.text
-                };
-            });
+    //     try {
+    //         const conversationHistory = messages.map(msg => {
+    //             return {
+    //                 role: msg.sender === 'user' ? 'user' : 'system',
+    //                 content: msg.text
+    //             };
+    //         });
 
-            // Send the message and conversation history to your Lambda function
-            const response = await fetch('https://f0pumc0bb6.execute-api.us-east-2.amazonaws.com/prod', {
-                method: 'POST',
-                body: JSON.stringify({ messages: conversationHistory }),
-                headers: { 'Content-Type': 'application/json' }
-            });
+    //         const response = await fetch('https://f0pumc0bb6.execute-api.us-east-2.amazonaws.com/prod', {
+    //             method: 'POST',
+    //             body: JSON.stringify({ messages: conversationHistory }),
+    //             headers: { 'Content-Type': 'application/json' }
+    //         });
 
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
+    //         if (!response.ok) {
+    //             throw new Error('Network response was not ok');
+    //         }
 
-            const data = await response.json();
+    //         const data = await response.json();
 
-            // Add the bot's response to the chat
-            setMessages(prevMessages => [...prevMessages, { sender: 'bot', text: data.reply }]);
-        } catch (error) {
-            console.error('Error:', error);
-            // Optionally, handle the error in the UI, for example, by showing an error message
-        }
-    };
+    //         setMessages(prevMessages => [...prevMessages, { sender: 'bot', text: data.reply }]);
+    //     } catch (error) {
+    //         console.error('Error:', error);
+    //     }
+    // };
 
 
-    // Function to add a bot message to introduce Branbot
     const introduceBot = () => {
         const introMessage = "Hi, I'm Branbot. Ask me anything about Brandon, and I'll do my best to answer!";
         setMessages(prevMessages => [...prevMessages, { sender: 'bot', text: introMessage }]);
     };
 
     useEffect(() => {
-        // When the chatbot opens, introduce Branbot
         if (isOpen && messages.length === 0) {
             introduceBot();
         }
     }, [isOpen]);
+
+    useEffect(() => {
+        if (messagesContainerRef.current) {
+            messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+        }
+    }, [messages]);
 
 
     return (
@@ -112,7 +133,7 @@ const Branbot = () => {
                 <Tooltip text='Hi! Have any questions?' placement='left'>
                     <div className='branbot-toggle-container'>
                         <img className='branbot-logo' onClick={toggleOpen} src={BranbotIcon} alt='bot' />
-                        {/* <img className='branbot-wave' src={Wave} alt='wave' /> */}
+                        {/* <img className='branbot-wave' src={WaveBlue} alt='wave' /> */}
                         <img className='branbot-wave' src={WaveGreen} alt='wave' />
                     </div>
                 </Tooltip>
@@ -127,7 +148,7 @@ const Branbot = () => {
                     </div>
 
                     <div className='chatbot-interface'>
-                        <div className="messages">
+                        <div className="messages" ref={messagesContainerRef}>
                             {messages.map((msg, index) => (
                                 <div key={index} className='message' >
                                     <div className={msg.sender === 'user' ? 'user-header' : 'bot-header'}>
