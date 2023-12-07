@@ -1,4 +1,4 @@
-const resumeData = {
+export const resumeData = {
     skills: {
         languages: ["JavaScript", "Python", "Ruby", "SQL", "HTML5", "CSS3", "TypeScript"],
         librariesAndFrameworks: ["React", "Redux", "Material UI", "Node/Express/Mongoose", "Ember", "jQuery", "Django", "Ruby on Rails"],
@@ -97,5 +97,3 @@ const resumeData = {
         }
     ]
 };
-
-export default resumeData;

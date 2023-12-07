@@ -70,7 +70,7 @@ const Branbot = () => {
             });
 
             // Send the message and conversation history to your Lambda function
-            const response = await fetch('https://your-api-gateway-url.com/branbot', {
+            const response = await fetch('https://f0pumc0bb6.execute-api.us-east-2.amazonaws.com/prod', {
                 method: 'POST',
                 body: JSON.stringify({ messages: conversationHistory }),
                 headers: { 'Content-Type': 'application/json' }
