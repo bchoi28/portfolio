@@ -107,10 +107,10 @@
 .chatbot-header-text {
     color: white;
     font-weight: 600;
-    letter-spacing: 1.5px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     align-self: center;
-    margin-left: 10px;
+    margin-left: 5px;
     font-size: 18px;
 }
 
@@ -120,7 +120,21 @@
 // }
 
 .branbot-logo-header {
-    height: 35px;
+    height: 150px;
+}
+
+.branbot-logo-message {
+    height: 30px;
+    position: relative;
+    top: 3px;
+    z-index: 12;
+    margin-left: 0px;
+    margin-right: -2px;
+}
+
+.fa-user-circle {
+    color: #20c997;
+    font-size: 24px;
 }
 
 .close-icon {
@@ -155,7 +169,7 @@
 }
 
 .message {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     display: flex;
     flex-direction: column;
 }
@@ -163,24 +177,25 @@
 .bot-header {
     display: flex;
     background-color: transparent;
-    margin-bottom: 3px;
+    margin-bottom: 0px;
+    align-items: center;
 }
 
 .user-header {
     display: flex;
     background-color: transparent;
-    margin-bottom: 3px;
+    margin-bottom: 1px;
     margin-left: 3px;
 }
 
 
-.message-sender {
-    color: white;
-}
-
 .message-icon {
     color: white;
-    margin-right: 10px;
+    margin-right: 9px;
+}
+
+.message-sender {
+    color: white;
 }
 
 .user-message,
@@ -250,14 +265,6 @@
 
 .fa-arrow-up {
     font-size: 15px;
-}
-
-.branbot-icon {
-    position: absolute;
-    // bottom: px;
-    right: 0px;
-    height: 200px;
-    z-index: 15;
 }
 
 @media (max-width: 600px) {

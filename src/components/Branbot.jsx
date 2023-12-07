@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import BranbotIcon from '../branbot.svg';
+import BranbotLogoText from '../branbot_logo_text.svg';
 import Wave from '../wave.svg';
+import WaveGreen from '../wave_green.svg';
 import { Tooltip } from './Tooltip';
 
 const Branbot = () => {
@@ -101,7 +103,8 @@ const Branbot = () => {
                 <Tooltip text='Hi! Have any questions?' placement='left'>
                     <div className='branbot-toggle-container'>
                         <img className='branbot-logo' onClick={toggleOpen} src={BranbotIcon} alt='bot' />
-                        <img className='branbot-wave' src={Wave} alt='wave' />
+                        {/* <img className='branbot-wave' src={Wave} alt='wave' /> */}
+                        <img className='branbot-wave' src={WaveGreen} alt='wave' />
                     </div>
                 </Tooltip>
             )}
@@ -109,9 +112,8 @@ const Branbot = () => {
             {isOpen && (
                 <div className={`chatbot-container ${isOpen ? 'open' : ''} ${isClosing ? 'closing' : ''}`}>
                     <div className='chatbot-header'>
-                        <img className='branbot-logo-header' src={BranbotIcon} alt="bot" />
-                        {/* <i className="fas fa-robot"></i> */}
-                        <div className='chatbot-header-text'>Branbot</div>
+                        <img className='branbot-logo-header' src={BranbotLogoText} alt="bot" />
+                        {/* <div className='chatbot-header-text'>Branbot</div> */}
                         <div onClick={toggleClose} className="close-icon">&times;</div>
                     </div>
 
@@ -121,7 +123,8 @@ const Branbot = () => {
                                 <div key={index} className='message' >
                                     <div className={msg.sender === 'user' ? 'user-header' : 'bot-header'}>
                                         <div className='message-icon'>
-                                            {msg.sender === 'user' ? <i className="fas fa-user"></i> : <i className="fas fa-robot"></i>}
+                                            {/* {msg.sender === 'user' ? <i className="fas fa-user"></i> : <img src={BranbotIconPlain} className='branbot-logo-message' alt='bot_plain' />} */}
+                                            {msg.sender === 'user' ? <i className="fas fa-user-circle"></i> : <img src={BranbotIcon} className='branbot-logo-message' alt='bot_plain' />}
                                         </div>
                                         <div className="message-sender">
                                             {msg.sender === 'user' ? 'You' : 'Branbot'}
