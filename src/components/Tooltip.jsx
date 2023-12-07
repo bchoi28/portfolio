@@ -9,11 +9,10 @@ export const Tooltip = (p) => {
             title: p.text,
             placement: p.placement,
             trigger: "hover",
-            customClass: 'custom-tooltip' // Add this line if the Bootstrap version supports it
 
         });
         return () => t.dispose();
     }, [p.text]);
 
-    return React.cloneElement(p.children, { ref: childRef, className: 'custom-tooltip' });
+    return React.cloneElement(p.children, { ref: childRef });
 };

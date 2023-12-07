@@ -118,8 +118,16 @@ const Branbot = () => {
                     <div className='chatbot-interface'>
                         <div className="messages">
                             {messages.map((msg, index) => (
-                                <div key={index} className={`message ${msg.sender === 'user' ? 'user-message' : 'bot-message'}`}>
-                                    {msg.text}
+                                <div key={index} className='message' >
+                                    <div className={msg.sender === 'user' ? 'user-header' : 'bot-header'}>
+                                        <div className='message-icon'>
+                                            {msg.sender === 'user' ? <i className="fas fa-user"></i> : <i className="fas fa-robot"></i>}
+                                        </div>
+                                        <div className="message-sender">
+                                            {msg.sender === 'user' ? 'You' : 'Branbot'}
+                                        </div>
+                                    </div>
+                                    <div className={msg.sender === 'user' ? 'user-message' : 'bot-message'}>{msg.text}</div>
                                 </div>
                             ))}
                         </div>

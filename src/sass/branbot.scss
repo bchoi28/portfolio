@@ -97,19 +97,21 @@
 
 .chatbot-header {
     display: flex;
-    height: 48px;
+    height: 60px;
     background-color: #111418;
     border-radius: 10px 10px 0 0;
-    padding: 15px 13px;
+    padding: 15px 13px 14px 13px;
     align-items: center;
 }
 
 .chatbot-header-text {
     color: white;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
     align-self: center;
     margin-left: 10px;
+    font-size: 18px;
 }
 
 // .fa-robot {
@@ -118,12 +120,12 @@
 // }
 
 .branbot-logo-header {
-    height: 30px;
+    height: 35px;
 }
 
 .close-icon {
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 10px;
     cursor: pointer;
     color: white;
@@ -140,7 +142,7 @@
 
 .chatbot-interface {
     padding: 15px;
-    width: 300px;
+    width: 340px;
     display: flex;
     flex-direction: column;
     height: 400px;
@@ -153,21 +155,51 @@
 }
 
 .message {
-    padding: 5px 10px;
-    border-radius: 5px;
     margin-bottom: 10px;
-    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bot-header {
+    display: flex;
+    background-color: transparent;
+    margin-bottom: 3px;
+}
+
+.user-header {
+    display: flex;
+    background-color: transparent;
+    margin-bottom: 3px;
+    margin-left: 3px;
+}
+
+
+.message-sender {
+    color: white;
+}
+
+.message-icon {
+    color: white;
+    margin-right: 10px;
+}
+
+.user-message,
+.bot-message {
+    margin-left: 30px;
+    font-size: 14px;
+    max-width: 86%;
+    padding: 8px;
+    border-radius: 10px;
 }
 
 .user-message {
     background-color: #d0f0d0;
-    align-self: flex-end;
 }
 
 .bot-message {
     background-color: #f0f0f0;
-    align-self: flex-start;
 }
+
 
 .message-form {
     position: relative;
