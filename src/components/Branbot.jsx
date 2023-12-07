@@ -61,10 +61,18 @@ const Branbot = () => {
         setMessages(prevMessages => [...prevMessages, { sender: 'user', text: userMessage }]);
 
         try {
-            // Send the message to your Lambda function via API Gateway
+            // Prepare the conversation history for the Lambda function
+            const conversationHistory = messages.map(msg => {
+                return {
+                    role: msg.sender === 'user' ? 'user' : 'system',
+                    content: msg.text
+                };
+            });
+
+            // Send the message and conversation history to your Lambda function
             const response = await fetch('https://your-api-gateway-url.com/branbot', {
                 method: 'POST',
-                body: JSON.stringify({ message: userMessage }),
+                body: JSON.stringify({ messages: conversationHistory }),
                 headers: { 'Content-Type': 'application/json' }
             });
 
@@ -81,6 +89,7 @@ const Branbot = () => {
             // Optionally, handle the error in the UI, for example, by showing an error message
         }
     };
+
 
     // Function to add a bot message to introduce Branbot
     const introduceBot = () => {
