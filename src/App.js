@@ -15,6 +15,7 @@ import { commonConfig } from "./config/commonConfig";
 // import Disclaimer from "./components/Disclaimer";
 import PreLoader from "./components/Preloader";
 import { Tooltip } from "./components/Tooltip";
+import Branbot from "./components/Branbot";
 
 function App() {
   const classicHeader = commonConfig.classicHeader;
@@ -107,7 +108,7 @@ function App() {
           ></Footer> */}
         </div>
         {/* back to top */}
-        <Tooltip text="Back to Top" placement="left">
+        {/* <Tooltip text="Back to Top" placement="left">
           <span
             id="back-to-top"
             className="rounded-circle"
@@ -118,10 +119,8 @@ function App() {
           >
             <i className="fa fa-chevron-up"></i>
           </span>
-        </Tooltip>
-
-        {/* <TermsAndConditions darkTheme={darkTheme}></TermsAndConditions> */}
-        {/* <Disclaimer darkTheme={darkTheme}></Disclaimer> */}
+        </Tooltip> */}
+            <Branbot/>
       </div>
     </>
   );

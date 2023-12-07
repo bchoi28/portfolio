@@ -1,0 +1,282 @@
+.chatbot-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    z-index: 10;
+}
+
+.chatbot-toggle {
+    position: relative;
+    z-index: 11;
+}
+
+.branbot-toggle-container {
+    position: relative;
+}
+
+.branbot-wave {
+    position: absolute;
+    opacity: 0;
+    top: -20px;
+    left: -30px;
+    height: 30px;
+    transition: opacity 0.2s ease;
+}
+
+.branbot-logo {
+    position: relative;
+    z-index: 11;
+    bottom: 0px;
+    right: 0px;
+    height: 60px;
+    z-index: 15;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: transform 0.2s ease;
+    }
+}
+
+.branbot-logo:hover+.branbot-wave {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    animation: wiggle 0.5s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+
+    0%,
+    100% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.chatbot-container {
+    position: relative;
+    z-index: 10;
+    background-color: #343541;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.14), 0px 8px 10px 1px rgba(0, 0, 0, 0.12), 0px 2px 16px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 10;
+
+    &.open {
+        animation: slideUp 0.3s ease-in-out forwards;
+    }
+
+    &.closing {
+        animation: slideDown 0.3s ease-in-out forwards;
+        transition: opacity 0.5s;
+        opacity: 0;
+    }
+}
+
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(100%);
+    }
+}
+
+.chatbot-header {
+    display: flex;
+    height: 60px;
+    background-color: #111418;
+    border-radius: 10px 10px 0 0;
+    padding: 15px 13px 14px 13px;
+    align-items: center;
+}
+
+.chatbot-header-text {
+    color: white;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    align-self: center;
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+// .fa-robot {
+//     color: white;
+//     margin-left: 10px;
+// }
+
+.branbot-logo-header {
+    height: 150px;
+}
+
+.branbot-logo-message {
+    height: 30px;
+    position: relative;
+    top: 3px;
+    z-index: 12;
+    margin-left: 0px;
+    margin-right: -2px;
+}
+
+.fa-user-circle {
+    color: #20c997;
+    font-size: 24px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: #CCC;
+    padding: 3px 10px 2px 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+
+    &:hover {
+        background-color: #B8B8B8;
+        transform: scale(1.1);
+    }
+}
+
+.chatbot-interface {
+    padding: 15px;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    z-index: 12;
+}
+
+.messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.message {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bot-header {
+    display: flex;
+    background-color: transparent;
+    margin-bottom: 0px;
+    align-items: center;
+}
+
+.user-header {
+    display: flex;
+    background-color: transparent;
+    margin-bottom: 1px;
+    margin-left: 3px;
+}
+
+
+.message-icon {
+    color: white;
+    margin-right: 9px;
+}
+
+.message-sender {
+    color: white;
+}
+
+.user-message,
+.bot-message {
+    margin-left: 30px;
+    font-size: 14px;
+    max-width: 86%;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.user-message {
+    background-color: #d0f0d0;
+}
+
+.bot-message {
+    background-color: #f0f0f0;
+}
+
+
+.message-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12.8px;
+    min-height: 50px;
+    overflow: hidden;
+    margin-top: 15px;
+
+    &:focus-visible {
+        outline: none;
+    }
+}
+
+
+.message-input {
+    font-size: 14px;
+    align-self: center;
+    width: 80%;
+    height: 35px;
+    max-height: 200px;
+    resize: none;
+    border: transparent;
+    background-color: transparent;
+    padding: 7px 5px 5px 5px;
+    color: white;
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: #CCC;
+    }
+}
+
+.send-button {
+    position: absolute;
+    right: 5px;
+    bottom: 6px;
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+}
+
+.fa-arrow-up {
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
+    .chat-interface {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.test-reply {
+    margin-bottom: 0;
+}
