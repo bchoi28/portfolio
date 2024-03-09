@@ -76,7 +76,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
         countRefObserver.observe(countRef.current);
 
         const sizeRefObserver = new IntersectionObserver(handleSizeIntersect, {
-            threshold: 1
+            threshold: 0.5
         })
         sizeRefObserver.observe(sizeRef.current)
 
