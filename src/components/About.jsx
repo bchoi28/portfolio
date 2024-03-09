@@ -71,12 +71,12 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
         headingObserver.observe(headingRef.current);
 
         const countRefObserver = new IntersectionObserver(handleCountIntersect, {
-            threshold: 1
+            threshold: 0.5
         });
         countRefObserver.observe(countRef.current);
 
         const sizeRefObserver = new IntersectionObserver(handleSizeIntersect, {
-            threshold: 0.5
+            threshold: 0.1
         })
         sizeRefObserver.observe(sizeRef.current)
 
@@ -303,9 +303,9 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                 </p>
                             </div>
                         </div>
-                        <div className="col-6 col-md-3">
+                        <div  ref={sizeRef} className="col-6 col-md-3">
                             <div ref={ref5} className="stat featured-box text-center">
-                                <h4 ref={sizeRef}
+                                <h4
                                     className={
                                         "text-12  mb-0 " +
                                         (darkTheme ? "text-white-50" : "text-muted")

@@ -80,13 +80,24 @@ const Resume = ({ classicHeader, darkTheme }) => {
 
     const experienceDetails = [
         {
+            yearRange: "Feb 2024 - Present",
+            title: "Software Engineer",
+            place: <a rel='noreferrer' href="https://www.tailorcare.com/" target="_blank">TailorCare</a>,
+        },
+        {
             yearRange: "Nov 2023 - Present",
             title: "Full-stack Engineer, Contract",
             place: <a rel='noreferrer' href="https://otpotential.com/" target="_blank">OT Potential</a>,
             // desc: <p>Design and implement a dynamic banner on Club OT Potential, the primary UI for members, with call-to-actions tailored to subscription tier (anonymous, free trial, paid) to enhance user engagement and conversion rates</p>
         },
         {
-            yearRange: "Oct 2023 - Present",
+            yearRange: "Nov 2023 - Feb 2024",
+            title: "Front-end Engineer, Internship",
+            place: <a href="https://livestockcity.com/" target="_blank" rel='noreferrer'>Livestock City</a>,
+            // desc: <p><strong>Direct</strong> the <strong>front-end development</strong> through an Agile/Jira workflow for a cross-platform, open-source desktop application
+        },
+        {
+            yearRange: "Oct 2023 - Feb 2024",
             title: "Front-end Engineer, Freelance",
             place: <a href="https://www.watershedtulsa.com/" target="_blank" rel='noreferrer'>Watershed Hospitality</a>,
             // desc: <p><strong>Direct</strong> the <strong>front-end development</strong> through an Agile/Jira workflow for a cross-platform, open-source desktop application
@@ -96,7 +107,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
             // desc4: <p>Achieve an estimated <strong>2-hr/day reduction</strong> in workload by automating employee payouts, streamlining payment breakdowns, and enhancing sales tracking, preventing costly accounting errors previously caused by manual Google Sheets input</p>,
         },
         {
-            yearRange: "Oct 2023 - Present",
+            yearRange: "Oct 2023 - Feb 2024",
             title: "Computer Science AI Trainer",
             place: <a href="https://scale.com/" target="_blank" rel="noreferrer">Scale AI</a>,
             // desc: <p>Critique and correct a series of <strong>computer science</strong> and programming-related responses produced by GPT-3.5 in terms of explanation quality, style and formatting, code functionality and performance, relevance, and security to fine-tune the AI model.</p>,
@@ -111,41 +122,6 @@ const Resume = ({ classicHeader, darkTheme }) => {
             // desc3: <p>Managed a caseload of 25+ clients across South Brooklyn, ensuring seamless communication among various stakeholders, including family members, insurance providers, and physicians to maximize client and <em>stakeholder satisfaction.</em></p>
         },
     ];
-
-    // const skills = [
-    //     {
-    //         name: "HTML",
-    //         percent: 95,
-    //     },
-    //     {
-    //         name: "CSS",
-    //         percent: 95,
-    //     },
-    //     {
-    //         name: "JavaScript",
-    //         percent: 91,
-    //     },
-    //     {
-    //         name: "Ruby",
-    //         percent: 89,
-    //     },
-    //     {
-    //         name: "React",
-    //         percent: 89,
-    //     },
-    //     {
-    //         name: "Rails",
-    //         percent: 86,
-    //     },
-    //     {
-    //         name: "SQL",
-    //         percent: 74,
-    //     },
-    //     {
-    //         name: "Python",
-    //         percent: "in progress",
-    //     },
-    // ];
 
     return (
         <section
