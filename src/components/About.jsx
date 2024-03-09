@@ -4,8 +4,6 @@ import resumeQR from "../documents/resume_dynamic_plain.png";
 
 const AboutUs = ({ classicHeader, darkTheme }) => {
 
-    // const codingLanguagesRef = useRef(null);
-
     const headingRef = useRef(null);
     const ref2 = useRef(null);
     const ref3 = useRef(null);
@@ -71,12 +69,12 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
         headingObserver.observe(headingRef.current);
 
         const countRefObserver = new IntersectionObserver(handleCountIntersect, {
-            threshold: 1
+            threshold: 0.5
         });
         countRefObserver.observe(countRef.current);
 
         const sizeRefObserver = new IntersectionObserver(handleSizeIntersect, {
-            threshold: 0.5
+            threshold: 0.1
         })
         sizeRefObserver.observe(sizeRef.current)
 
@@ -150,6 +148,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
         }
     }, [yearsExperienceNum, countRefObserved]);
 
+    debugger
     return (
         <section id="about" className={"section " + (darkTheme ? "bg-dark-1" : "")}>
             <div className={"container " + (classicHeader ? "" : "px-lg-5")}>
@@ -164,7 +163,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                     >
                         About Me
                     </h2>
-                    <p
+                    <div
                         ref={ref3}
                         className={
                             "paragraph1 text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
@@ -173,7 +172,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                     >
                         Know Me More
                         <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
-                    </p>
+                    </div>
                 </div>
                 {/* Heading end*/}
                 <div className="row gy-5">
@@ -253,9 +252,9 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                 >
                                     <span>{codingLanguagesNum}</span>
                                 </h4>
-                                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                                    <div style={{ color: '#20c997', cursor: 'pointer' }} id="coding-languages">Coding Languages</div>
-                                </p>
+                                <div className={"mb-0 " + (darkTheme ? "text-light" : "")}>
+                                    <p style={{ color: '#20c997', cursor: 'pointer' }} id="coding-languages">Coding Languages</p>
+                                </div>
                             </div>
                         </div>
                         <div className="col-6 col-md-3">
@@ -268,9 +267,11 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                 >
                                     <span>{codingProjectsNum}</span>
                                 </h4>
-                                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                                    Coding Projects
-                                </p>
+                                <div>
+                                    <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
+                                        Coding Projects
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div className="col-6 col-md-3">
@@ -283,9 +284,11 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                 >
                                     <span>{workEnvironmentsNum}</span>
                                 </h4>
-                                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                                    Professional Work Environments
-                                </p>
+                                <div>
+                                    <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
+                                        Professional Work Environments
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div className="col-6 col-md-3">
@@ -298,14 +301,16 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                                 >
                                     <span>{yearsExperienceNum}</span>+
                                 </h4>
-                                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                                    Years Experience (of coffee-drinking)
-                                </p>
+                                <div>
+                                    <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
+                                        Years Experience (of coffee-drinking)
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div className="col-6 col-md-3">
+                        <div ref={sizeRef} className="col-6 col-md-3">
                             <div ref={ref5} className="stat featured-box text-center">
-                                <h4 ref={sizeRef}
+                                <h4
                                     className={
                                         "text-12  mb-0 " +
                                         (darkTheme ? "text-white-50" : "text-muted")
